@@ -1,260 +1,74 @@
 %PDF-1.4
-%“Œ‹ž
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/Contents 8 0 R /MediaBox [ 0 0 612 792 ] /Parent 7 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+<<
+/PageMode /UseNone /Pages 7 0 R /Type /Catalog
+>>
 endobj
 6 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 7 0 R >>
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260524030726-04'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260524030726-04'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+>>
 endobj
 7 0 obj
-<< /Length 6222 >>
-stream
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 27 Tf 1 0 0 1 46.0 746.0 Tm (Prajit Parmar) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F1 11 Tf 1 0 0 1 46.0 729.0 Tm (Fintech & Web Development Professional) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 7.7 Tf 1 0 0 1 46.0 712.0 Tm (Brantford, ON | 647-220-8123 | 3.prajit@gmail.com | linkedin.com/in/prajit-parmar-92705a189 | github.com/Prajit-Parmar) Tj ET
-0.120 0.720 0.640 RG
-1.20 w
-n 46.0 700.0 m 566.0 700.0 l S
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 680.0 Tm (PROFESSIONAL SUMMARY) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 673.0 m 566.0 673.0 l S
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 655.0 Tm (Computer Engineering graduate with web development training from Conestoga College, focused on) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 642.0 Tm (fintech, banking technology, and user-friendly financial interfaces. Experienced in UI/UX design,) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 629.0 Tm (REST API integration, Git/GitHub, and building portfolio-ready web applications. Trilingual in) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 616.0 Tm (English, Hindi, and Gujarati with strong customer service, leadership, and payment operations) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 603.0 Tm (experience.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 570.0 Tm (TECHNICAL SKILLS) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 563.0 m 566.0 563.0 l S
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 9 Tf 1 0 0 1 46.0 545.0 Tm (Languages) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9 Tf 1 0 0 1 141.0 545.0 Tm (HTML, CSS, JavaScript, Java basics, SQL) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 9 Tf 1 0 0 1 46.0 531.0 Tm (Frontend / UX) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9 Tf 1 0 0 1 141.0 531.0 Tm (Responsive UI, Figma, wireframing, accessibility-minded design) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 9 Tf 1 0 0 1 46.0 517.0 Tm (Tools) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9 Tf 1 0 0 1 141.0 517.0 Tm (Git, GitHub, VS Code, Microsoft Office, Excel) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 9 Tf 1 0 0 1 46.0 503.0 Tm (Concepts) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9 Tf 1 0 0 1 141.0 503.0 Tm (REST APIs, Agile/Scrum, fintech fundamentals, digital banking, payment flows) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 469.0 Tm (PROJECTS) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 462.0 m 566.0 462.0 l S
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 444.0 Tm (NorthStar CAD Bank - Online Banking Prototype) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 444.0 Tm (2026) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 430.0 Tm (GitHub: github.com/Prajit-Parmar/northstar-cad-bank) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 415.0 Tm (- Built a Canadian online banking prototype using AngularJS, Node.js, HTML, CSS, and JavaScript.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 403.0 Tm (- Created dummy user logins, CAD chequing and savings balances, an active credit card, card offers,) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 391.0 Tm (E-Transfer send/receive flows, biometric login, help centre, and profile page.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 379.0 Tm (- Designed the prototype to demonstrate fintech product thinking, account clarity, and realistic banking) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 367.0 Tm (workflows.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 330.0 Tm (WORK EXPERIENCE) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 323.0 m 566.0 323.0 l S
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 305.0 Tm (Shift Manager) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 305.0 Tm (Mar 2025 - Present) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 291.0 Tm (Pizza Hut - Brantford, Ontario, Canada) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 276.0 Tm (- Lead staff during high-volume shifts, coordinating kitchen and front-of-house workflows under) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 264.0 Tm (pressure.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 252.0 Tm (- Handle order processing, payment reconciliation, and cash balancing with strong transaction accuracy.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 240.0 Tm (- Resolve customer issues and support escalations while maintaining a professional service experience.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 228.0 Tm (- Train and onboard new staff on operational procedures, communication standards, and store workflow.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 211.0 Tm (Crew Member) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 211.0 Tm (Mar 2024 - Feb 2025) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 197.0 Tm (Pizza Hut - Brantford, Ontario, Canada) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 182.0 Tm (- Managed real-time customer inquiries in person and by phone while supporting fast-paced restaurant) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 170.0 Tm (operations.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 158.0 Tm (- Supported payment processing for high-volume transactions across evening and weekend shifts.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 146.0 Tm (- Collaborated with team members to keep orders accurate, timely, and service-focused.) Tj ET
-endstream
+<<
+/Count 1 /Kids [ 4 0 R ] /Type /Pages
+>>
 endobj
 8 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R >> >> /Contents 9 0 R >>
-endobj
-9 0 obj
-<< /Length 2822 >>
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 2834
+>>
 stream
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 746.0 Tm (UI/UX Design Intern) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 746.0 Tm (2021 - 2023) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 732.0 Tm (Alien Software - Anand, Gujarat, India) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 717.0 Tm (- Designed and prototyped user interfaces for client projects using modern design tools.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 705.0 Tm (- Collaborated with development teams to translate wireframes into functional and user-friendly) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 693.0 Tm (interfaces.) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 681.0 Tm (- Gained experience in visual design, user research, iteration, and design-to-development handoff.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 644.0 Tm (EDUCATION) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 637.0 m 566.0 637.0 l S
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 619.0 Tm (Diploma - Web Development) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 619.0 Tm (2023 - 2024) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 605.0 Tm (Conestoga College - Ontario, Canada) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 590.0 Tm (- Studied HTML, CSS, JavaScript, backend fundamentals, REST APIs, and Agile development practices.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10.5 Tf 1 0 0 1 46.0 573.0 Tm (B.Tech - Computer Engineering) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F3 8.5 Tf 1 0 0 1 421.0 573.0 Tm (2019 - 2023) Tj ET
-0.120 0.720 0.640 rg
-0.120 0.720 0.640 RG
-BT /F2 9.2 Tf 1 0 0 1 46.0 559.0 Tm (A.D. Patel Institute of Technology - Gujarat, India) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 8.8 Tf 1 0 0 1 56.0 544.0 Tm (- Studied programming, software systems, databases, computer science fundamentals, and UI/UX design.) Tj ET
-0.040 0.050 0.070 rg
-0.040 0.050 0.070 RG
-BT /F2 10 Tf 1 0 0 1 46.0 507.0 Tm (CORE COMPETENCIES) Tj ET
-0.860 0.880 0.920 RG
-0.70 w
-n 46.0 500.0 m 566.0 500.0 l S
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 482.0 Tm (Customer Experience & Retention | Cash Handling & Payment Operations | Team Leadership | UI/UX Design |) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 469.0 Tm (REST API Integration | Multilingual Communication | Banking Technology Interest | Available Full-Time) Tj ET
-0.280 0.310 0.380 rg
-0.280 0.310 0.380 RG
-BT /F1 9.2 Tf 1 0 0 1 46.0 456.0 Tm (Immediately) Tj ET
-endstream
+Gatm=flGiW&q/)-oV:k,Oqt#[:ZFm#SaeV(4Ni/*85MWH&fd"?7oT$LpGAhn@k!?d.[M_i"OR&1du[?Wr:ou(QkGrckk('7IR'*ar/TC&aUO4V+9)2r03<=$?EZ`pT]^GYfRbJWX4-dsII^RZQ9X_ukBDZ_JB[?^:@m'=g,)B@GX-gC4Qu@`rh/E`#$j?_7!/!-`)fseK.s8Ys.RP9Rf&N-2f#)00DKgj:TLnN-g:2,h'%(2eo9"$i,p^Zg>-r[q/(&LP>;:aD_:Zc.C\EH\t+9l)SXYA\Ihs^CD/^MT9[8AmEgR.6mUt<C4!MAq57@F<8rTm`J9;mSn4]QrqBB'VtCZ][q<1g!87a/0Z;,%.d,@3Y,cD`CYSBXhW2Kns3Rqn;:3N./_2D%nuZf5]l]dp7u<12[<\WSRT,Pfs1M^Ma+:pQs3Q9#X+7M-i4CoEmUZ6;H[GJ]a%H1lEIP,(kBD<gcXMXB<e!@U4(p<m-a2i_K2oR=?Cdbj^I%4>:@kKML.9iiAPsG3c"L]W</FN$/)3h%E_;IAObq@^R?^_iTe]pi)as'[B<irY9]03>aI.,uemVS"Lic+kb"<Ps*L_lP)1,E8Sa`PF:@rA]ON8W_#31Ft?5i0@Oh&k:'paPDkESY3]$mOHO-)qSEHXq:3"J)b*C-/=HfRd/mk/ana<ae]F]LclEa-6`6X@Nq8/1Zp(+(LNHgXiY+q#^r$_[ihBVgGN,Bn`u/n-dj:@p&#R4=cMd\r78Lrq-q=_Vu0-Uj<`d+<^JUM:a-6ol*[$J/IcDUro3M+C<K5s\;uVbb&@43hBU>id726=MDN[H`9qPqa6a4H)olKa25<7V6Gp*!-f>#dLV[1`jI:E.tV)!o"qdrfl?&b(t!S%Ks"hD8qQ(aJV;B(WGrB-J!FF+]#_fi&G:&)-pM'?!j,Xd.leiS""D]ghtjc0'0f1]urs3ic*3F-jpr4?,X+bNp,PfYn;pY>.HNMfhEi927^CddYu3VI1\,A*#b(edV%778qd!q7P5E*/-&&\]k`0Hk9><1IH[5^V"YTAoJdabkj78SkPe+O$Ci_Eq9=pu`kOdFd9iS@*;Zc0/<T7cO69E,]+:0\RUnQUqkO5?:7[`s]!=:IG+:>8."E=nHrf_Gr`iH%LOL6gh'52(feo&-@Ac:-X^S\&(0%fR6CDn/7LBSj,cg4fAG@YOf6Iad1R6$[7&rqLEiHaoV'!k=LWB9FUPh]RmeVQgCW>sI&r4[kicT^B]Z3Zcd>0AHShEt3@>0k=R^IG\:UGJA$.,UaoK-?N]Ik_umrJZQX_SYe/JVJ+LpP4sm/l"AX&YsHL\lGtBuZGSYga+NjDk_eR*uqg8I%-#!L',3`hL;teTDOJQRusQ*PLo/(:lq7cB4/;7!FV=WmYudj+#m5_R]TNibaXjKm:GgidFH,dB3cKQ?&2Q3p+.U@"lhuocNB1,PUH7!5-c$_DTC+;2m4_)_S?aDtbbjd#K>S[H.r+U.R8;m1ok8@MSERB@F=uZcJMor2[l@,7s-fZ$$fE.$gP"'m#sJOZ\tO8=n(qrR(%YrM05L3mA>m\)EK%DGcW+`!Au8>VU?RBNa*`d1&>h\:B$6E>:H8e[@-E=rObhLRfrR_YS!6&F_`eLr=n5)R<$;6q^B>2nK1j1cQCS4eMju#2,WM(6[SbF@\c(=j]nuFed,[aI?.]g\]"mX$'2V7Y`0*QeD]l]Ph1m4b'!Q/sU<W)fs`+2l811IFJ\;5W*M($(;bX&a13uL1hH?8P@$YX$U@t<nP8HR2$KSY]lsAT6Qu"L7MdkZa$[?!p_P@c.qR#>qXs_=TN%H]X92Lg)-FlKpdItB:mFECgb-=5pb4Z=RuZMbLsOUQ2K7Z"E2Wlp;BFr95q2l)pEL8982A/,n(E,Yt__Q<,'1=]$\aiQC0s(-%<IUr0^$h5E$Ye7s>cE-F"S`?]J*^A"GXCesapKp4N5=Da@H)a^r&-fPaZmh:d,98#m@2s%9aUSP&JcMAch*!%F8[Er39QV;E-[EV%*P)3P/Tg8&YfF6#Lb&sd8bds@VBR)$62f&m&3[DF-M(5<l,T\i'(A?d$Kk/_T;742(b=/-`"3RPh>#RkcqhE=kq.W(Gl)3e$p3#.PY89!=#9'p$=5+##lZ\!+kYeJ1N=3'`6K.:!JSlH)GPZ\G'E$p!4O\9-OD3X/hI\ShCiU(YbGF0u$nX:`)VH]3+%nSo!2ju`4%S#W"RX)lgOuqfIL>o"d/3glkD_iLDaoLCh&R'6j,=?<5(m[hI69m=gce]3eQb]DM.">Sdqu1RIq%cn6M-ntZh*?Kl(m#s[Mom/8VdRqMc('&.j7rNKO11Gh)s["Mf+S2;mI>_3^9O[5/R@+h)^*C.!hF&,j761eaX@9LJWHG(Y6(D@YS*]tPG4Van_irCY*j?L!k-N&G^K3K7N/Ams)JgQa.iFmDpr\6gTAB3;I?O%MR5"?`a1usfZKFCW]aYF*:Rslk)nFPkk.hC;m;_1":0U3@JlVWna36AJoEE,gGE3mR=a-JOPAhll:Y,%/_T&Sa-4$UCe]`(WNSTt:A+s<^@=gj3W@tNm5N;cN.Qa,geeCpot".UW+6i'DO860jmJ$V.TBaq(5EO-cl`M2!duLLf!D7p9pUoVL*;&VA^QPmVU=MS`S'>KriSh#^BZd>JqW%B'H+Zr1r!"8U/V'Rj5#F"]p:[31ASWW_62IpBoN<,mJJ:2.-=f]oROSKJ6*Sh9<99Wdq!lX&,d#j1r"+AqYRhmg!f$Irpfi7h\G.DIp`doJ,As=RhP\T'(,MsaeSa'H&>(J0XGh6^6ffReWld_2n.g"@<T*sY`/Fn.tTt_+1f\8(]~>endstream
 endobj
 xref
-0 10
+0 9
 0000000000 65535 f 
-0000000015 00000 n 
-0000000064 00000 n 
-0000000127 00000 n 
-0000000197 00000 n 
-0000000272 00000 n 
-0000000350 00000 n 
-0000000496 00000 n 
-0000006770 00000 n 
-0000006916 00000 n 
+0000000061 00000 n 
+0000000102 00000 n 
+0000000209 00000 n 
+0000000321 00000 n 
+0000000514 00000 n 
+0000000582 00000 n 
+0000000862 00000 n 
+0000000921 00000 n 
 trailer
-<< /Size 10 /Root 1 0 R >>
+<<
+/ID 
+[<c50d4a5f17954029b38fa8f05e6c8848><c50d4a5f17954029b38fa8f05e6c8848>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 6 0 R
+/Root 5 0 R
+/Size 9
+>>
 startxref
-9790
+3846
 %%EOF

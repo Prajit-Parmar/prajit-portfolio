@@ -199,6 +199,15 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
   .about-text p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.2rem; }
   .about-text p span { color: var(--white); font-weight: 500; }
+  .education-list { display: grid; gap: .8rem; margin: 1.6rem 0 .4rem; }
+  .education-card {
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    background: var(--glass2);
+    border-radius: 8px;
+  }
+  .education-school { color: var(--white); font-weight: 700; font-size: .92rem; margin-bottom: .25rem; }
+  .education-degree { color: var(--muted); font-size: .84rem; }
   .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
   .stat-card {
     padding: 1.2rem; border: 1px solid var(--border);
@@ -310,7 +319,6 @@
     padding: .25rem .7rem; border-radius: 999px; margin-bottom: 1rem;
   }
   .status-live { background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
-  .status-wip { background: rgba(255,170,0,0.08); color: #ffaa00; border: 1px solid rgba(255,170,0,0.2); }
   .status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
   .project-title { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: .6rem; }
   .project-desc { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; }
@@ -319,28 +327,20 @@
   .project-link { display: inline-flex; align-items: center; gap: .4rem; font-size: .82rem; color: var(--cyan); text-decoration: none; transition: gap .2s; }
   .project-link:hover { gap: .7rem; }
 
-  /* ── CERTIFICATIONS ── */
-  #certifications { background: var(--bg2); }
-  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.2rem; max-width: 1000px; margin: 0 auto; }
-  .cert-card {
-    padding: 1.5rem; border: 1px solid var(--border);
-    background: var(--glass); border-radius: 10px;
-    backdrop-filter: blur(12px); transition: all .3s;
-    display: flex; gap: 1rem; align-items: flex-start;
-  }
-  .cert-card:hover { border-color: rgba(0,212,255,0.3); transform: translateY(-3px); }
-  .cert-icon { font-size: 1.8rem; flex-shrink: 0; }
-  .cert-body {}
-  .cert-name { font-family: 'Syne', sans-serif; font-size: .95rem; font-weight: 700; color: var(--white); margin-bottom: .3rem; }
-  .cert-provider { font-size: .8rem; color: var(--muted); margin-bottom: .5rem; }
-  .cert-bar-outer { height: 3px; background: rgba(255,255,255,0.06); border-radius: 2px; }
-  .cert-bar-inner { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--cyan2)); border-radius: 2px; transition: width 1.5s ease; width: 0; }
-  .cert-pct { font-size: .75rem; color: var(--cyan); margin-top: .35rem; }
-
   /* ── CONTACT ── */
   #contact { background: var(--bg); }
   .contact-inner { max-width: 650px; margin: 0 auto; text-align: center; }
   .contact-inner p { color: var(--muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem; }
+  .contact-inner .work-permit {
+    display: inline-block;
+    margin: -1rem auto 2rem;
+    padding: .65rem 1rem;
+    border: 1px solid rgba(55,230,193,0.18);
+    border-radius: 6px;
+    color: var(--white);
+    background: rgba(55,230,193,0.055);
+    font-size: .9rem;
+  }
   .contact-links { display: flex; justify-content: center; gap: 1.2rem; flex-wrap: wrap; }
   .contact-btn {
     display: flex; align-items: center; gap: .6rem;
@@ -531,6 +531,16 @@
   .featured-badge { display: inline-flex; align-items: center; gap: .4rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 999px; margin-bottom: 1rem; background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
   .featured-title { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--white); margin-bottom: .7rem; line-height: 1.2; }
   .featured-desc { font-size: .9rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.3rem; }
+  .case-study {
+    border: 1px solid rgba(55,230,193,0.16);
+    background: rgba(55,230,193,0.045);
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+    margin-bottom: 1.4rem;
+  }
+  .case-study-label { color: var(--cyan); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .55rem; }
+  .case-study p { color: var(--muted); font-size: .88rem; line-height: 1.65; margin-bottom: .65rem; }
+  .case-study p:last-child { margin-bottom: 0; }
   .featured-highlights { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin-bottom: 1.4rem; }
   .featured-highlight {
     border: 1px solid var(--border);
@@ -879,7 +889,7 @@
   section {
     z-index: 2;
   }
-  #about, #experience, #certifications {
+  #about, #experience {
     background:
       linear-gradient(180deg, rgba(255,255,255,0.025), transparent 35%),
       var(--bg2);
@@ -889,7 +899,7 @@
       radial-gradient(circle at 80% 20%, rgba(56,168,255,0.075), transparent 24rem),
       var(--bg);
   }
-  .stat-card, .skill-chip, .project-card, .cert-card, .featured-project {
+  .stat-card, .skill-chip, .project-card, .featured-project {
     box-shadow: 0 14px 45px rgba(0,0,0,0.22);
   }
   .project-card::before, .skill-chip::after {
@@ -993,7 +1003,6 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certs</a></li>
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
@@ -1087,16 +1096,26 @@
   <div class="about-grid">
     <div class="about-text reveal-left">
       <p>I'm <span>Prajit Parmar</span>, a Computer Engineering graduate and Conestoga College Web Development diploma holder, now building my path in <span>fintech and banking technology</span> in Canada.</p>
-      <p>My background bridges <span>technical development</span> and <span>UI/UX design</span> — I interned at Alien Software as a UI/UX Designer while completing my B.Tech, and I've been sharpening my web dev skills ever since.</p>
-      <p>I thrive at the intersection of <span>financial systems</span> and user-facing technology — building tools that make payments, banking, and money management simpler and smarter.</p>
+      <p>My strongest proof point is <span>NorthStar CAD Bank</span>, a Canadian online banking prototype that brings together product thinking, fintech UX, and web development fundamentals.</p>
+      <p>My background bridges <span>technical development</span> and <span>UI/UX design</span> — I interned at Alien Software as a UI/UX Designer during my B.Tech, and I now lead shift operations at Pizza Hut while sharpening my web development skills.</p>
+      <div class="education-list" aria-label="Education">
+        <div class="education-card">
+          <div class="education-school">Conestoga College</div>
+          <div class="education-degree">Web Development Diploma</div>
+        </div>
+        <div class="education-card">
+          <div class="education-school">A.D. Patel Institute of Technology</div>
+          <div class="education-degree">B.Tech, Computer Engineering</div>
+        </div>
+      </div>
       <div class="about-stats">
         <div class="stat-card">
           <div class="stat-num">2</div>
           <div class="stat-label">Projects Shipped</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">6+</div>
-          <div class="stat-label">In Progress</div>
+          <div class="stat-num">1</div>
+          <div class="stat-label">Tech Internship</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">3</div>
@@ -1138,6 +1157,7 @@
     <div class="skill-chip reveal"><div class="skill-icon">📊</div><div class="skill-name">Excel / Sheets</div><div class="skill-type">Data</div></div>
     <div class="skill-chip reveal"><div class="skill-icon">🚀</div><div class="skill-name">Agile / Scrum</div><div class="skill-type">Methodology</div></div>
     <div class="skill-chip reveal"><div class="skill-icon">🏦</div><div class="skill-name">Digital Banking</div><div class="skill-type">Domain</div></div>
+    <div class="skill-chip reveal"><div class="skill-icon">🤖</div><div class="skill-name">AI Tools</div><div class="skill-type">Productivity</div></div>
     <div class="skill-chip reveal"><div class="skill-icon">💻</div><div class="skill-name">VS Code</div><div class="skill-type">Tools</div></div>
   </div>
 </section>
@@ -1149,30 +1169,19 @@
   <div class="timeline">
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Mar 2025 — Present</div>
+      <div class="timeline-date">Mar 2024 — Present</div>
       <div class="timeline-role">Shift Manager</div>
       <div class="timeline-company">Pizza Hut · Brantford, Ontario</div>
       <ul class="timeline-bullets">
-        <li>Lead kitchen and front-of-house staff during peak hours, managing multi-task workflows under pressure.</li>
-        <li>Handle order processing, payment reconciliation, and cash balancing — building financial transaction accuracy.</li>
-        <li>Resolve customer complaints and manage escalations, maintaining high satisfaction scores.</li>
-        <li>Onboard and train new staff, demonstrating leadership and communication skills.</li>
+        <li>Promoted from Crew Member to Shift Manager in Apr 2025 after consistently handling high-volume service and closing responsibilities.</li>
+        <li>Lead front-of-house and kitchen teams during peak periods, coordinating order flow, staffing, and customer escalations.</li>
+        <li>Handle payment operations including POS transactions, cash balancing, order corrections, and end-of-shift reconciliation.</li>
+        <li>Maintain transaction accuracy under pressure, building practical experience with customer-facing financial workflows.</li>
       </ul>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Mar 2024 — Feb 2025</div>
-      <div class="timeline-role">Crew Member</div>
-      <div class="timeline-company">Pizza Hut · Brantford, Ontario</div>
-      <ul class="timeline-bullets">
-        <li>Managed real-time customer inquiries in-person and via phone, resolving issues under pressure.</li>
-        <li>Supported payment processing for high-volume transactions across evenings and weekends.</li>
-        <li>Coordinated with kitchen staff for seamless operations — teamwork skills applicable to fintech ops.</li>
-      </ul>
-    </div>
-    <div class="timeline-item reveal">
-      <div class="timeline-dot"></div>
-      <div class="timeline-date">2021 — 2023 (During B.Tech)</div>
+      <div class="timeline-date">During B.Tech</div>
       <div class="timeline-role">UI/UX Design Intern</div>
       <div class="timeline-company">Alien Software · Anand, Gujarat, India</div>
       <ul class="timeline-bullets">
@@ -1213,6 +1222,11 @@
       <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub</div>
       <div class="featured-title">NorthStar CAD Bank</div>
       <div class="featured-desc">A full Canadian online banking prototype built with <strong style="color:var(--white)">AngularJS &amp; Node.js</strong>. It demonstrates authenticated dummy users, CAD account balances, credit products, E-Transfer flows, biometric login controls, support content, and a profile experience.</div>
+      <div class="case-study">
+        <div class="case-study-label">Mini Case Study</div>
+        <p>I designed NorthStar around the decisions a Canadian banking user needs to make quickly: checking available balances, understanding credit exposure, completing transfers with confidence, and finding support without breaking the flow.</p>
+        <p>The interface emphasizes dashboard scanning, CAD-first copy, realistic dummy accounts, and clear transaction states so a recruiter can evaluate both the technical build and the fintech product reasoning behind it.</p>
+      </div>
       <div class="featured-highlights">
         <div class="featured-highlight">
           <div class="highlight-label">Banking Flows</div>
@@ -1245,93 +1259,18 @@
   </div>
 
   <p class="projects-note reveal">
-    <span>Portfolio project pipeline:</span> NorthStar is the current featured build. As each new project is finished, it can be moved from the upcoming list into this section with its own GitHub link, tech stack, and short case-study summary.
+    <span>Portfolio standard:</span> this section only shows projects that are ready for a recruiter walkthrough. Future ideas stay off the site until they have a working demo or a clean README.
   </p>
 
   <div class="projects-grid">
     <div class="project-card reveal">
       <div class="project-status status-live"><span class="status-dot"></span>Live</div>
       <div class="project-title">Personal Finance Tracker</div>
-      <div class="project-desc">Web app to log income, categorize expenses, and display summary charts. Demonstrates core fintech product thinking — the kind of tool retail banks build for customers.</div>
-      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Charts</span></div>
-      <a href="https://github.com/Prajit-Parmar" target="_blank" class="project-link">View on GitHub →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-status status-wip"><span class="status-dot"></span>In Progress</div>
-      <div class="project-title">Banking Dashboard UI</div>
-      <div class="project-desc">Modern banking interface with account overview, transaction history, and analytics. Focused on accessibility and clean UX design patterns.</div>
-      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span><span class="tag">UI/UX</span></div>
-      <a href="https://github.com/Prajit-Parmar" target="_blank" class="project-link">Coming Soon →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-status status-wip"><span class="status-dot"></span>In Progress</div>
-      <div class="project-title">Payment Flow Prototype</div>
-      <div class="project-desc">Figma + coded prototype of a checkout and payment flow — exploring UX patterns used in modern fintech apps like Wise and Revolut.</div>
-      <div class="project-tags"><span class="tag">Figma</span><span class="tag">Prototyping</span><span class="tag">UX Research</span></div>
-      <a href="https://github.com/Prajit-Parmar" target="_blank" class="project-link">Coming Soon →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-status status-wip"><span class="status-dot"></span>Planned</div>
-      <div class="project-title">Loan Calculator App</div>
-      <div class="project-desc">Interactive tool to compute EMIs, total interest, and amortization schedules — core banking product calculations.</div>
-      <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">Math</span><span class="tag">Banking</span></div>
-      <a href="https://github.com/Prajit-Parmar" target="_blank" class="project-link">Coming Soon →</a>
-    </div>
-    <div class="project-card reveal">
-      <div class="project-status status-wip"><span class="status-dot"></span>Planned</div>
-      <div class="project-title">Fraud Detection Dashboard</div>
-      <div class="project-desc">Data visualization dashboard displaying transaction anomaly patterns — a front-end exploration of fraud monitoring concepts used in banking.</div>
-      <div class="project-tags"><span class="tag">JavaScript</span><span class="tag">D3.js</span><span class="tag">Fintech</span></div>
-      <a href="https://github.com/Prajit-Parmar" target="_blank" class="project-link">Coming Soon →</a>
+      <div class="project-desc">A browser-based budgeting tool to log income and expenses, categorize transactions, track net cash flow, and review spending patterns. It frames everyday money management with the same clarity banks aim for in customer-facing dashboards.</div>
+      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag">Fintech UX</span></div>
+      <a href="finance-tracker/" target="_blank" class="project-link">Open Live Demo →</a>
     </div>
   </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certifications">
-  <div class="section-label">Learning Path</div>
-  <h2 class="section-title reveal">Certifications <span>In Progress</span></h2>
-  <div class="certs-grid">
-    <div class="cert-card reveal" data-pct="65">
-      <div class="cert-icon">☁️</div>
-      <div class="cert-body">
-        <div class="cert-name">AWS Cloud Practitioner</div>
-        <div class="cert-provider">Amazon Web Services</div>
-        <div class="cert-bar-outer"><div class="cert-bar-inner" data-width="65%"></div></div>
-        <div class="cert-pct">65% Complete</div>
-      </div>
-    </div>
-    <div class="cert-card reveal" data-pct="50">
-      <div class="cert-icon">🏦</div>
-      <div class="cert-body">
-        <div class="cert-name">Fintech Foundations</div>
-        <div class="cert-provider">Coursera / University of Michigan</div>
-        <div class="cert-bar-outer"><div class="cert-bar-inner" data-width="50%"></div></div>
-        <div class="cert-pct">50% Complete</div>
-      </div>
-    </div>
-    <div class="cert-card reveal" data-pct="40">
-      <div class="cert-icon">🔐</div>
-      <div class="cert-body">
-        <div class="cert-name">Cybersecurity Basics</div>
-        <div class="cert-provider">Google / Coursera</div>
-        <div class="cert-bar-outer"><div class="cert-bar-inner" data-width="40%"></div></div>
-        <div class="cert-pct">40% Complete</div>
-      </div>
-    </div>
-    <div class="cert-card reveal" data-pct="30">
-      <div class="cert-icon">📊</div>
-      <div class="cert-body">
-        <div class="cert-name">SQL for Data Analytics</div>
-        <div class="cert-provider">LinkedIn Learning</div>
-        <div class="cert-bar-outer"><div class="cert-bar-inner" data-width="30%"></div></div>
-        <div class="cert-pct">30% Complete</div>
-      </div>
-    </div>
-  </div>
-  <p style="text-align:center; color: var(--muted); font-size:.85rem; margin-top: 1.8rem; max-width:500px; margin-left:auto; margin-right:auto;">
-    ✦ Update your actual certifications and their progress percentages — these are placeholder examples.
-  </p>
 </section>
 
 <!-- RESUME -->
@@ -1357,6 +1296,7 @@
   <h2 class="section-title reveal" style="text-align:center;">Open to <span>Opportunities</span></h2>
   <div class="contact-inner reveal">
     <p>I'm actively looking for roles in <strong style="color:var(--white)">fintech, banking technology, or web development</strong>. Whether it's an entry-level tech role at a bank, a fintech startup, or a dev position — let's talk.</p>
+    <p class="work-permit">Work authorization: valid Canadian work permit. Available for roles in Canada, remote, hybrid, or in-person.</p>
     <div class="contact-links">
       <a href="mailto:3.prajit@gmail.com" class="contact-btn">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -1423,7 +1363,7 @@
 <!-- FOOTER -->
 <footer>
   <span>Prajit Parmar</span>
-  <span>Brantford, ON · Canada · <span style="color:var(--cyan)">Open to Remote & In-Person</span></span>
+  <span>Brantford, ON · Canada · <span style="color:var(--cyan)">Canadian Work Permit · Open to Remote & In-Person</span></span>
 </footer>
 
 <script>
@@ -1449,7 +1389,6 @@ const sectionColors = {
   skills: ['#9b8cff', '#38a8ff', 'rgba(155,140,255,0.55)'],
   experience: ['#ffcb6b', '#37e6c1', 'rgba(255,203,107,0.55)'],
   projects: ['#37e6c1', '#38a8ff', 'rgba(55,230,193,0.55)'],
-  certifications: ['#ff6b8a', '#ffcb6b', 'rgba(255,107,138,0.55)'],
   resume: ['#ffcb6b', '#37e6c1', 'rgba(255,203,107,0.55)'],
   contact: ['#38a8ff', '#9b8cff', 'rgba(56,168,255,0.55)']
 };
@@ -1507,15 +1446,13 @@ const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
     if(e.isIntersecting) {
       e.target.classList.add('visible');
-      const bar = e.target.querySelector('.cert-bar-inner');
-      if(bar) setTimeout(() => { bar.style.width = bar.dataset.width; }, 200);
     }
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
 document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => observer.observe(el));
 
-document.querySelectorAll('.skills-grid, .projects-grid, .certs-grid').forEach(grid => {
+document.querySelectorAll('.skills-grid, .projects-grid').forEach(grid => {
   grid.querySelectorAll('.reveal').forEach((child, i) => {
     child.style.transitionDelay = (i * 0.07) + 's';
   });
