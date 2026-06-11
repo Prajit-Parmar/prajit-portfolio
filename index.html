@@ -407,6 +407,29 @@
     line-height: 1.7;
     max-width: 620px;
   }
+  .resume-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .65rem;
+    margin-top: 1rem;
+  }
+  .resume-link {
+    display: inline-flex;
+    align-items: center;
+    padding: .55rem .85rem;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 999px;
+    background: rgba(255,255,255,0.04);
+    color: var(--white);
+    text-decoration: none;
+    font-size: .84rem;
+    transition: all .25s ease;
+  }
+  .resume-link:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+    transform: translateY(-2px);
+  }
   .resume-actions {
     position: relative;
     z-index: 1;
@@ -1306,11 +1329,11 @@
       </div>
       <div class="mini-card left">
         <div class="mini-label">Focus</div>
-        <div class="mini-value">Fintech UX</div>
+        <div class="mini-value">Product Thinking</div>
       </div>
       <div class="mini-card bottom">
         <div class="mini-label">Stack</div>
-        <div class="mini-value warn">AngularJS + Node</div>
+        <div class="mini-value warn">JavaScript + Node APIs</div>
       </div>
     </div>
   </div>
@@ -1333,8 +1356,8 @@
   <div class="about-grid">
     <div class="about-text reveal-left">
       <p>I'm <span>Prajit Parmar</span>, a Computer Engineering graduate and Conestoga College Web Development diploma holder, now building my path in <span>fintech and banking technology</span> in Canada.</p>
-      <p>My strongest proof point is <span>NorthStar CAD Bank</span>, a Canadian online banking prototype that brings together product thinking, fintech UX, and web development fundamentals.</p>
-      <p>My background bridges <span>technical development</span> and <span>UI/UX design</span> — I interned at Alien Software as a UI/UX Designer during my B.Tech, and I now lead shift operations at Pizza Hut while sharpening my web development skills.</p>
+      <p>My strongest proof point is <span>NorthStar CAD Bank</span>, a Canadian online banking prototype that brings together product thinking, backend flow, and frontend experience in one build.</p>
+      <p>My background bridges <span>technical development</span> and <span>UI/UX design</span> - I interned at Alien Software as a UI/UX Designer during my B.Tech, and I now lead shift operations at Pizza Hut, which sharpened training, communication, and problem solving.</p>
       <div class="education-list" aria-label="Education">
         <div class="education-card">
           <div class="education-school">Conestoga College</div>
@@ -1347,20 +1370,20 @@
       </div>
       <div class="about-stats">
         <div class="stat-card">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Projects Shipped</div>
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Full Case Studies</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">1</div>
-          <div class="stat-label">Tech Internship</div>
+          <div class="stat-label">Banking Prototype</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Languages Spoken</div>
+          <div class="stat-num">25+</div>
+          <div class="stat-label">Employees Trained</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Degrees Earned</div>
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Client/Tester Meetings</div>
         </div>
       </div>
     </div>
@@ -1410,10 +1433,12 @@
       <div class="timeline-role">Shift Manager</div>
       <div class="timeline-company">Pizza Hut · Brantford, Ontario</div>
       <ul class="timeline-bullets">
-        <li>Promoted from Crew Member to Shift Manager in Apr 2025 after consistently handling high-volume service and closing responsibilities.</li>
-        <li>Lead front-of-house and kitchen teams during peak periods, coordinating order flow, staffing, and customer escalations.</li>
-        <li>Handle payment operations including POS transactions, cash balancing, order corrections, and end-of-shift reconciliation.</li>
-        <li>Maintain transaction accuracy under pressure, building practical experience with customer-facing financial workflows.</li>
+        <li>Trained 25+ employees and 10+ drivers to support consistent store operations and customer service standards.</li>
+        <li>Worked across every station in the store to build strong operational knowledge before and during promotion to Shift Manager.</li>
+        <li>Supported weekend day shifts and helped the store meet projected sales targets by maintaining high service quality and using upselling methods.</li>
+        <li>Contributed to nearly 99% projected sales hit rate by focusing on customer satisfaction, order accuracy, and effective upselling.</li>
+        <li>Handled 3+ customer complaints per day with a calm, solution-focused approach.</li>
+        <li>Coached staff, supported busy shifts, and maintained accountability across operations to keep service running smoothly.</li>
       </ul>
     </div>
     <div class="timeline-item reveal">
@@ -1422,9 +1447,12 @@
       <div class="timeline-role">UI/UX Design Intern</div>
       <div class="timeline-company">Alien Software · Anand, Gujarat, India</div>
       <ul class="timeline-bullets">
-        <li>Designed and prototyped user interfaces for client projects using industry-standard design tools.</li>
-        <li>Collaborated with dev teams to translate wireframes into functional, user-friendly interfaces.</li>
-        <li>Gained hands-on experience in user research, visual design, and iterative prototyping.</li>
+        <li>Worked across front-end, back-end, and testing teams to support project delivery and cross-functional collaboration.</li>
+        <li>Participated in 50+ meetings with clients and testers to refine requirements and improve project outcomes.</li>
+        <li>Followed repeated revision and feedback cycles to maximize output on assigned projects.</li>
+        <li>Contributed to design, development, testing coordination, and implementation updates across multiple project stages.</li>
+        <li>Improved overall performance through consistent collaboration, attention to detail, and a willingness to learn new tools and workflows.</li>
+        <li>Continued building UI knowledge and updating design skills to strengthen current and future project work.</li>
       </ul>
     </div>
   </div>
@@ -1456,13 +1484,13 @@
       </div>
     </div>
     <div class="featured-info">
-      <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub</div>
+      <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub Pages</div>
       <div class="featured-title">NorthStar CAD Bank</div>
-      <div class="featured-desc">A full Canadian online banking prototype built with <strong style="color:var(--white)">AngularJS &amp; Node.js</strong>. It demonstrates authenticated dummy users, CAD account balances, credit products, E-Transfer flows, biometric login controls, support content, and a profile experience.</div>
+      <div class="featured-desc">A Canadian online banking prototype built with <strong style="color:var(--white)">AngularJS, Node.js, and JavaScript</strong>. It demonstrates authenticated dummy users, CAD account balances, credit products, E-Transfer flows, biometric login controls, support content, and a profile experience. The build also includes Node-powered server structure, stateful interactions, and form-driven workflows so it reads like a product, not a static page.</div>
       <div class="case-study">
         <div class="case-study-label">Mini Case Study</div>
-        <p>I designed NorthStar around the decisions a Canadian banking user needs to make quickly: checking available balances, understanding credit exposure, completing transfers with confidence, and finding support without breaking the flow.</p>
-        <p>The interface emphasizes dashboard scanning, CAD-first copy, realistic dummy accounts, and clear transaction states so a recruiter can evaluate both the technical build and the fintech product reasoning behind it.</p>
+        <p>I built NorthStar around the decisions a Canadian banking user needs to make quickly: checking balances, understanding credit exposure, completing transfers with confidence, and finding support without breaking the flow.</p>
+        <p>The interface emphasizes dashboard scanning, CAD-first copy, realistic dummy accounts, and clear transaction states. I also built it to show product structure, backend flow, and iterative improvements, so it reads as a full case study rather than a one-screen mockup.</p>
       </div>
       <div class="featured-highlights">
         <div class="featured-highlight">
@@ -1518,11 +1546,11 @@
     <div class="featured-info">
       <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub</div>
       <div class="featured-title">Maple Crest Developments</div>
-      <div class="featured-desc">A polished Canadian real-estate developer website built with <strong style="color:var(--white)">Next.js, React, Framer Motion, and Tailwind CSS</strong>. It presents premium residential and mixed-use developments, featured communities, booking and inquiry flows, and a modern brand presence for Maple Crest.</div>
+      <div class="featured-desc">A polished Canadian real-estate developer website built with <strong style="color:var(--white)">Next.js, React, Framer Motion, and Tailwind CSS</strong>. It presents premium residential and mixed-use developments, featured communities, booking and inquiry flows, and a modern brand presence for Maple Crest. The build uses reusable components, responsive layouts, motion, and content structure so the site feels like a real product system, not just a static brochure.</div>
       <div class="case-study">
         <div class="case-study-label">Mini Case Study</div>
         <p>I shaped Maple Crest to feel like a premium development brand: strong hero messaging, clear project discovery, and a path from browsing communities to booking a viewing or contacting the team.</p>
-        <p>The interface balances architectural imagery, motion, and structured project data so visitors can scan communities quickly and understand the brand's scale across Canada.</p>
+        <p>The interface balances architectural imagery, motion, and structured project data. I continue refining the UI as I learn more so the experience stays polished, usable, and recruiter-ready.</p>
       </div>
       <div class="featured-highlights">
         <div class="featured-highlight">
@@ -1546,9 +1574,9 @@
         <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Framer Motion</span><span class="tag">Tailwind</span><span class="tag">Real Estate</span>
       </div>
       <div class="featured-actions">
-        <a href="https://github.com/Prajit-Parmar/Maple-Crest" target="_blank" class="btn-view">
+        <a href="https://prajit-parmar.github.io/Maple-Crest/" target="_blank" class="btn-view">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-          View on GitHub
+          View Live Site
         </a>
         <a href="https://github.com/Prajit-Parmar/Maple-Crest#readme" target="_blank" class="btn-code">Read Project Details →</a>
       </div>
@@ -1556,18 +1584,8 @@
   </div>
 
   <p class="projects-note reveal">
-    <span>Portfolio standard:</span> this section only shows projects that are ready for a recruiter walkthrough. NorthStar CAD Bank and Maple Crest Developments are the current featured case studies, while future ideas stay off the site until they have a working demo or a clean README.
+    <span>Portfolio standard:</span> NorthStar CAD Bank and Maple Crest Developments are the two featured case studies. The finance tracker has been removed from the featured section until it is expanded into a deeper product story.
   </p>
-
-  <div class="projects-grid">
-    <a href="finance-tracker/" class="project-card reveal" aria-label="Open Personal Finance Tracker live demo">
-      <div class="project-status status-live"><span class="status-dot"></span>Live</div>
-      <div class="project-title">Personal Finance Tracker</div>
-      <div class="project-desc">A browser-based budgeting tool to log income and expenses, categorize transactions, track net cash flow, and review spending patterns. It frames everyday money management with the same clarity banks aim for in customer-facing dashboards.</div>
-      <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag">Fintech UX</span></div>
-      <span class="project-link">Open Live Demo →</span>
-    </a>
-  </div>
 </section>
 
 <!-- RESUME -->
@@ -1577,8 +1595,13 @@
   <div class="resume-panel reveal">
     <div class="resume-copy">
       <h3>Need the quick version?</h3>
-      <p>Download my updated resume as a PDF. It includes my fintech/web development focus, NorthStar CAD Bank and Maple Crest Developments projects, UI/UX background, and current Pizza Hut shift manager experience.</p>
-      <div class="resume-chip">Updated for portfolio visitors</div>
+      <p>Download my updated resume as a PDF. It uses the same wording as this portfolio and highlights two full case studies, product thinking, banking workflow design, and hands-on internship collaboration.</p>
+      <div class="resume-chip">Same wording across website and PDF</div>
+      <div class="resume-links">
+        <a href="https://prajit.it" target="_blank" class="resume-link">Website: prajit.it</a>
+        <a href="https://linkedin.com/in/prajit-parmar-92705a189" target="_blank" class="resume-link">LinkedIn</a>
+        <a href="https://github.com/Prajit-Parmar" target="_blank" class="resume-link">GitHub</a>
+      </div>
     </div>
     <div class="resume-actions">
       <a href="Prajit_Parmar_Resume.pdf" download class="btn-primary">Download Resume</a>
@@ -1612,7 +1635,7 @@
 </section>
 
 <section id="ai-profile-summary" class="sr-only" aria-label="AI-readable candidate summary">
-  Prajit Parmar is a fintech and web development candidate based in Brantford, Ontario, Canada with a valid Canadian work permit. Skills include HTML, CSS, JavaScript, AngularJS, Node.js, UI/UX design, Figma, Git, GitHub, Excel, Google Sheets, fintech concepts, digital banking, and Agile/Scrum. Portfolio projects include NorthStar CAD Bank, a Canadian online banking prototype with dummy user login, CAD accounts, card offers, E-Transfer flows, biometric controls, support, and profile screens, Maple Crest Developments, a Canadian real-estate website with premium community showcases and inquiry flows, plus a Personal Finance Tracker for browser-based budgeting. Experience includes Shift Manager at Pizza Hut in Brantford and UI/UX Design Intern at Alien Software in Anand, Gujarat, India. Prajit is open to fintech, banking technology, web development, entry-level, remote, hybrid, and in-person opportunities in Canada. Contact email is 3.prajit@gmail.com.
+  Prajit Parmar is a fintech and web development candidate based in Brantford, Ontario, Canada with a valid Canadian work permit. Skills include HTML, CSS, JavaScript, Node.js, UI/UX design, Figma, Git, GitHub, Excel, Google Sheets, fintech concepts, digital banking, and Agile/Scrum. At Pizza Hut, he trained 25+ employees and 10+ drivers, worked across every station, handled 3+ complaints per day, supported weekend day shifts, and helped the store hit projected sales on nearly 99% of shifts through strong customer service and upselling. During his UI/UX internship at Alien Software, he worked across front-end, back-end, and testing teams, joined 50+ client and tester meetings, and used repeated feedback cycles to improve project output. Portfolio projects include NorthStar CAD Bank, a Canadian online banking prototype with product thinking, backend flow, and frontend experience, and Maple Crest Developments, a polished real-estate website with reusable components, responsive layouts, and motion. Prajit is open to fintech, banking technology, web development, entry-level, remote, hybrid, and in-person opportunities in Canada. Contact email is 3.prajit@gmail.com. Website: prajit.it. LinkedIn and GitHub links are available in the resume section.
 </section>
 
 <!-- AI AGENT -->
@@ -1645,7 +1668,7 @@
         <h3>AI-readable facts</h3>
         <ul>
           <li>Role target: fintech, banking technology, and web development.</li>
-          <li>Core stack: HTML, CSS, JavaScript, AngularJS, Node.js, Git, GitHub.</li>
+          <li>Core stack: HTML, CSS, JavaScript, Node.js, Git, GitHub.</li>
           <li>Product strengths: digital banking UX, dashboards, forms, and recruiter-ready demos.</li>
           <li>Availability: Canada, remote, hybrid, or in-person roles.</li>
         </ul>
@@ -1801,11 +1824,11 @@ document.querySelectorAll('.skills-grid, .projects-grid').forEach(grid => {
 // Modal
 const agentResponses = {
   skills: '<strong>Skills scan ready:</strong> I will lock onto the strongest recruiter signals: frontend, integration, data, design, fintech domain knowledge, and practical tooling.',
-  projects: '<strong>Project fit:</strong> The strongest portfolio proof is NorthStar CAD Bank, a Canadian online banking prototype with login, CAD balances, cards, E-Transfer flows, biometric controls, help, and profile screens. Maple Crest Developments adds a polished real-estate website showcase, and there is also a Personal Finance Tracker live demo.',
-  resume: '<strong>Resume:</strong> The resume section includes the PDF download and open-in-browser links. I can scroll there so a recruiter or AI reviewer can grab the file quickly.',
+  projects: '<strong>Project fit:</strong> The strongest portfolio proof is NorthStar CAD Bank, a Canadian online banking prototype with login, CAD balances, cards, E-Transfer flows, biometric controls, help, and profile screens. Maple Crest Developments adds a polished real-estate website showcase, and both projects now read as full case studies with backend flow, reusable components, and iterative UI improvements.',
+  resume: '<strong>Resume:</strong> The resume section includes the PDF download plus Website, LinkedIn, and GitHub links. I can scroll there so a recruiter or AI reviewer can grab everything quickly.',
   contact: '<strong>Contact:</strong> Prajit is open to fintech, banking technology, and web development roles in Canada, remote, hybrid, or in-person. Email: 3.prajit@gmail.com.',
-  summary: '<strong>Recruiter summary:</strong> Prajit Parmar is a fintech and web development candidate in Brantford, Ontario with a valid Canadian work permit. He combines front-end development, AngularJS/Node.js project work, digital banking UX, real-estate website design, and practical operations experience as a Shift Manager.',
-  hire: '<strong>Why hire Prajit:</strong> He has a focused fintech portfolio, working demos, UI/UX experience, customer-facing operations experience, and a clear interest in banking technology. That mix is useful for entry-level web, fintech, QA-adjacent, support engineering, or product-minded development roles.'
+  summary: '<strong>Recruiter summary:</strong> Prajit Parmar is a fintech and web development candidate in Brantford, Ontario with a valid Canadian work permit. He combines shift leadership at Pizza Hut, UI/UX internship work at Alien Software, and portfolio projects in digital banking and real-estate web design.',
+  hire: '<strong>Why hire Prajit:</strong> He has a focused fintech portfolio, real customer-service and leadership experience, working demos, and a clear interest in banking technology, product structure, and UI improvement. That mix is useful for entry-level web, fintech, QA-adjacent, support engineering, or product-minded development roles.'
 };
 const agentScanTimers = [];
 
