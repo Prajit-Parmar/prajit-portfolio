@@ -650,6 +650,217 @@
     background: var(--amber);
     color: #15120a;
   }
+  .nav-action-group {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+  }
+  .agent-nav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: 2.45rem;
+    padding: 0 1rem;
+    border: 1px solid rgba(55,230,193,0.55);
+    border-radius: 999px;
+    background: rgba(55,230,193,0.08);
+    color: var(--cyan);
+    font-family: 'DM Sans', sans-serif;
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background .25s, color .25s, transform .25s;
+  }
+  .agent-nav-btn:hover {
+    background: var(--cyan);
+    color: var(--bg);
+    transform: translateY(-1px);
+  }
+  .agent-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9000;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5.6rem 1.4rem 1.4rem;
+    background: rgba(3,5,10,0.56);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease;
+  }
+  .agent-overlay.open {
+    opacity: 1;
+    pointer-events: all;
+  }
+  .agent-panel {
+    width: min(440px, 100%);
+    max-height: 100%;
+    overflow: auto;
+    border: 1px solid rgba(130,211,255,0.22);
+    border-radius: 16px;
+    background: rgba(12,15,24,0.94);
+    box-shadow: 0 26px 80px rgba(0,0,0,0.55);
+    backdrop-filter: blur(22px);
+    transform: translateY(18px);
+    transition: transform .25s ease;
+  }
+  .agent-overlay.open .agent-panel { transform: translateY(0); }
+  .agent-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1.2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .agent-kicker {
+    color: var(--cyan);
+    font-size: .7rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+  }
+  .agent-title {
+    margin-top: .25rem;
+    font-family: 'Syne', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 800;
+  }
+  .agent-close {
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    color: var(--white);
+    cursor: pointer;
+  }
+  .agent-body {
+    display: grid;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+  .agent-message {
+    border: 1px solid rgba(55,230,193,0.16);
+    border-radius: 12px;
+    padding: 1rem;
+    background: rgba(55,230,193,0.06);
+    color: var(--muted);
+    font-size: .92rem;
+    line-height: 1.65;
+  }
+  .agent-message.scanning {
+    border-color: rgba(255,203,107,0.45);
+    background:
+      linear-gradient(90deg, rgba(55,230,193,0.08), rgba(255,203,107,0.12), rgba(55,230,193,0.08));
+    background-size: 220% 100%;
+    animation: agentScan 1.3s linear infinite;
+  }
+  .agent-message strong { color: var(--white); }
+  .agent-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .6rem;
+  }
+  .agent-actions button,
+  .agent-search button {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 2.7rem;
+    padding: 0 .8rem;
+    background: rgba(255,255,255,0.04);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: border-color .2s, color .2s, background .2s;
+  }
+  .agent-actions button:hover,
+  .agent-search button:hover {
+    border-color: var(--cyan);
+    color: var(--cyan);
+  }
+  .agent-search {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .6rem;
+  }
+  .agent-search input {
+    min-width: 0;
+    min-height: 2.7rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0 .85rem;
+    background: rgba(255,255,255,0.05);
+    color: var(--white);
+    outline: none;
+  }
+  .agent-search input:focus { border-color: var(--cyan); }
+  .agent-summary {
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+    color: var(--muted);
+    font-size: .84rem;
+    line-height: 1.6;
+  }
+  .agent-summary h3 {
+    margin-bottom: .5rem;
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-size: .95rem;
+  }
+  .agent-summary ul {
+    display: grid;
+    gap: .35rem;
+    padding-left: 1rem;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  .agent-section-focus {
+    position: relative;
+    isolation: isolate;
+  }
+  .agent-section-focus::after {
+    content: '';
+    position: absolute;
+    inset: 3.2rem 1.2rem;
+    z-index: -1;
+    border: 1px solid rgba(55,230,193,0.26);
+    border-radius: 22px;
+    background:
+      radial-gradient(circle at 18% 24%, rgba(55,230,193,0.12), transparent 18rem),
+      radial-gradient(circle at 82% 68%, rgba(255,203,107,0.12), transparent 18rem);
+    box-shadow: 0 0 70px rgba(55,230,193,0.16);
+    pointer-events: none;
+    animation: sectionLock 1.8s ease both;
+  }
+  .skill-chip.agent-highlight {
+    border-color: var(--amber);
+    background: rgba(255,203,107,0.1);
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 42px rgba(255,203,107,0.14), 0 0 0 1px rgba(255,203,107,0.24);
+  }
+  .skill-chip.agent-highlight::after {
+    transform: translateX(110%);
+  }
+  @keyframes agentScan {
+    from { background-position: 0% 50%; }
+    to { background-position: 220% 50%; }
+  }
+  @keyframes sectionLock {
+    from { opacity: 0; transform: scale(.98); }
+    to { opacity: 1; transform: scale(1); }
+  }
   .scroll-progress {
     position: fixed;
     top: 0;
@@ -942,6 +1153,15 @@
       border-radius: 14px;
     }
     .nav-links { display: none; }
+    .nav-action-group { gap: .4rem; }
+    .agent-nav-btn,
+    .nav-cta {
+      min-height: 2.25rem;
+      padding: 0 .75rem;
+      font-size: .68rem;
+    }
+    .agent-overlay { padding: 4.8rem .75rem .75rem; }
+    .agent-actions { grid-template-columns: 1fr; }
     #hero { padding-top: 6rem; }
     .hero-3d { display: none; }
     .market-tape { bottom: .8rem; }
@@ -1020,7 +1240,10 @@
     <li><a href="#resume">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <button class="nav-cta" onclick="openModal()">Hire Me</button>
+  <div class="nav-action-group">
+    <button class="agent-nav-btn" type="button" onclick="openAgent()">AI Agent</button>
+    <button class="nav-cta" onclick="openModal()">Hire Me</button>
+  </div>
 </nav>
 
 <!-- HERO -->
@@ -1272,8 +1495,68 @@
     </div>
   </div>
 
+  <!-- FEATURED: Maple Crest Developments -->
+  <div class="featured-project reveal">
+    <div class="featured-project-preview">
+      <div class="fp-screen">
+        <div class="fp-bar">
+          <div class="fp-dot" style="background:#ff5f57"></div>
+          <div class="fp-dot" style="background:#febc2e"></div>
+          <div class="fp-dot" style="background:#28c840"></div>
+        </div>
+        <div style="font-size:.6rem;color:rgba(0,212,255,0.4);margin-bottom:.6rem;letter-spacing:.06em">MAPLE CREST DEVELOPMENTS - PROJECTS</div>
+        <div class="fp-row"><span class="fp-label">Maple Heights</span><span class="fp-val green">Under Construction</span></div>
+        <div class="fp-row"><span class="fp-label">Northern Pines</span><span class="fp-val green">Completed</span></div>
+        <div class="fp-row"><span class="fp-label">Riverstone Residences</span><span class="fp-val">Pre-Construction</span></div>
+        <div class="fp-row"><span class="fp-label">Client Flow</span><span class="fp-val">Book a viewing ✓</span></div>
+        <div class="fp-row" style="margin-top:.4rem">
+          <span class="fp-label">Responsive UI</span>
+          <span class="fp-val" style="font-size:.75rem;color:#00ff88">● Live</span>
+        </div>
+      </div>
+    </div>
+    <div class="featured-info">
+      <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub</div>
+      <div class="featured-title">Maple Crest Developments</div>
+      <div class="featured-desc">A polished Canadian real-estate developer website built with <strong style="color:var(--white)">Next.js, React, Framer Motion, and Tailwind CSS</strong>. It presents premium residential and mixed-use developments, featured communities, booking and inquiry flows, and a modern brand presence for Maple Crest.</div>
+      <div class="case-study">
+        <div class="case-study-label">Mini Case Study</div>
+        <p>I shaped Maple Crest to feel like a premium development brand: strong hero messaging, clear project discovery, and a path from browsing communities to booking a viewing or contacting the team.</p>
+        <p>The interface balances architectural imagery, motion, and structured project data so visitors can scan communities quickly and understand the brand's scale across Canada.</p>
+      </div>
+      <div class="featured-highlights">
+        <div class="featured-highlight">
+          <div class="highlight-label">Brand Presentation</div>
+          <div class="highlight-copy">A premium visual system tailored for a Canadian development company.</div>
+        </div>
+        <div class="featured-highlight">
+          <div class="highlight-label">Responsive Layout</div>
+          <div class="highlight-copy">Built to feel strong on desktop, tablet, and mobile without losing hierarchy.</div>
+        </div>
+        <div class="featured-highlight">
+          <div class="highlight-label">Motion UI</div>
+          <div class="highlight-copy">Framer Motion interactions keep the site feeling polished and modern.</div>
+        </div>
+        <div class="featured-highlight">
+          <div class="highlight-label">Lead Capture</div>
+          <div class="highlight-copy">Viewing and inquiry pathways support the business goal behind the design.</div>
+        </div>
+      </div>
+      <div class="featured-tags">
+        <span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Framer Motion</span><span class="tag">Tailwind</span><span class="tag">Real Estate</span>
+      </div>
+      <div class="featured-actions">
+        <a href="https://github.com/Prajit-Parmar/Maple-Crest" target="_blank" class="btn-view">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          View on GitHub
+        </a>
+        <a href="https://github.com/Prajit-Parmar/Maple-Crest#readme" target="_blank" class="btn-code">Read Project Details →</a>
+      </div>
+    </div>
+  </div>
+
   <p class="projects-note reveal">
-    <span>Portfolio standard:</span> this section only shows projects that are ready for a recruiter walkthrough. Future ideas stay off the site until they have a working demo or a clean README.
+    <span>Portfolio standard:</span> this section only shows projects that are ready for a recruiter walkthrough. NorthStar CAD Bank and Maple Crest Developments are the current featured case studies, while future ideas stay off the site until they have a working demo or a clean README.
   </p>
 
   <div class="projects-grid">
@@ -1294,7 +1577,7 @@
   <div class="resume-panel reveal">
     <div class="resume-copy">
       <h3>Need the quick version?</h3>
-      <p>Download my updated resume as a PDF. It includes my fintech/web development focus, NorthStar CAD Bank project, UI/UX background, and current Pizza Hut shift manager experience.</p>
+      <p>Download my updated resume as a PDF. It includes my fintech/web development focus, NorthStar CAD Bank and Maple Crest Developments projects, UI/UX background, and current Pizza Hut shift manager experience.</p>
       <div class="resume-chip">Updated for portfolio visitors</div>
     </div>
     <div class="resume-actions">
@@ -1327,6 +1610,49 @@
     </div>
   </div>
 </section>
+
+<section id="ai-profile-summary" class="sr-only" aria-label="AI-readable candidate summary">
+  Prajit Parmar is a fintech and web development candidate based in Brantford, Ontario, Canada with a valid Canadian work permit. Skills include HTML, CSS, JavaScript, AngularJS, Node.js, UI/UX design, Figma, Git, GitHub, Excel, Google Sheets, fintech concepts, digital banking, and Agile/Scrum. Portfolio projects include NorthStar CAD Bank, a Canadian online banking prototype with dummy user login, CAD accounts, card offers, E-Transfer flows, biometric controls, support, and profile screens, Maple Crest Developments, a Canadian real-estate website with premium community showcases and inquiry flows, plus a Personal Finance Tracker for browser-based budgeting. Experience includes Shift Manager at Pizza Hut in Brantford and UI/UX Design Intern at Alien Software in Anand, Gujarat, India. Prajit is open to fintech, banking technology, web development, entry-level, remote, hybrid, and in-person opportunities in Canada. Contact email is 3.prajit@gmail.com.
+</section>
+
+<!-- AI AGENT -->
+<div class="agent-overlay" id="agentOverlay" onclick="handleAgentOverlayClick(event)" aria-hidden="true">
+  <aside class="agent-panel" role="dialog" aria-modal="true" aria-labelledby="agentTitle">
+    <div class="agent-head">
+      <div>
+        <div class="agent-kicker">Portfolio Guide</div>
+        <div class="agent-title" id="agentTitle">Prajit's AI Agent</div>
+      </div>
+      <button class="agent-close" type="button" onclick="closeAgent()" aria-label="Close AI agent">x</button>
+    </div>
+    <div class="agent-body">
+      <div class="agent-message" id="agentMessage">
+        <strong>Hi, I can help recruiters scan this portfolio fast.</strong> Ask about skills, projects, resume, contact, or use the quick buttons to jump to the right section.
+      </div>
+      <div class="agent-actions" aria-label="AI agent quick actions">
+        <button type="button" onclick="agentQuickAction('skills')">Show skills</button>
+        <button type="button" onclick="agentQuickAction('projects')">Best projects</button>
+        <button type="button" onclick="agentQuickAction('resume')">Open resume</button>
+        <button type="button" onclick="agentQuickAction('contact')">Contact Prajit</button>
+        <button type="button" onclick="agentQuickAction('summary')">Recruiter summary</button>
+        <button type="button" onclick="agentQuickAction('hire')">Why hire him?</button>
+      </div>
+      <form class="agent-search" onsubmit="askAgent(event)">
+        <input id="agentInput" type="text" placeholder="Try: take me to projects" aria-label="Ask the AI agent"/>
+        <button type="submit">Ask</button>
+      </form>
+      <div class="agent-summary">
+        <h3>AI-readable facts</h3>
+        <ul>
+          <li>Role target: fintech, banking technology, and web development.</li>
+          <li>Core stack: HTML, CSS, JavaScript, AngularJS, Node.js, Git, GitHub.</li>
+          <li>Product strengths: digital banking UX, dashboards, forms, and recruiter-ready demos.</li>
+          <li>Availability: Canada, remote, hybrid, or in-person roles.</li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</div>
 
 <!-- HIRE ME MODAL -->
 <div class="modal-overlay" id="hireModal" onclick="handleOverlayClick(event)">
@@ -1473,6 +1799,109 @@ document.querySelectorAll('.skills-grid, .projects-grid').forEach(grid => {
 });
 
 // Modal
+const agentResponses = {
+  skills: '<strong>Skills scan ready:</strong> I will lock onto the strongest recruiter signals: frontend, integration, data, design, fintech domain knowledge, and practical tooling.',
+  projects: '<strong>Project fit:</strong> The strongest portfolio proof is NorthStar CAD Bank, a Canadian online banking prototype with login, CAD balances, cards, E-Transfer flows, biometric controls, help, and profile screens. Maple Crest Developments adds a polished real-estate website showcase, and there is also a Personal Finance Tracker live demo.',
+  resume: '<strong>Resume:</strong> The resume section includes the PDF download and open-in-browser links. I can scroll there so a recruiter or AI reviewer can grab the file quickly.',
+  contact: '<strong>Contact:</strong> Prajit is open to fintech, banking technology, and web development roles in Canada, remote, hybrid, or in-person. Email: 3.prajit@gmail.com.',
+  summary: '<strong>Recruiter summary:</strong> Prajit Parmar is a fintech and web development candidate in Brantford, Ontario with a valid Canadian work permit. He combines front-end development, AngularJS/Node.js project work, digital banking UX, real-estate website design, and practical operations experience as a Shift Manager.',
+  hire: '<strong>Why hire Prajit:</strong> He has a focused fintech portfolio, working demos, UI/UX experience, customer-facing operations experience, and a clear interest in banking technology. That mix is useful for entry-level web, fintech, QA-adjacent, support engineering, or product-minded development roles.'
+};
+const agentScanTimers = [];
+
+function openAgent() {
+  document.getElementById('agentOverlay').classList.add('open');
+  document.getElementById('agentOverlay').setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('agentInput')?.focus(), 80);
+}
+function closeAgent() {
+  clearAgentScan();
+  document.getElementById('agentOverlay').classList.remove('open');
+  document.getElementById('agentOverlay').setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+function handleAgentOverlayClick(e) {
+  if(e.target === document.getElementById('agentOverlay')) closeAgent();
+}
+function setAgentMessage(key) {
+  document.getElementById('agentMessage').innerHTML = agentResponses[key] || agentResponses.summary;
+}
+function setAgentHtml(html, scanning) {
+  const message = document.getElementById('agentMessage');
+  message.innerHTML = html;
+  message.classList.toggle('scanning', Boolean(scanning));
+}
+function clearAgentScan() {
+  while(agentScanTimers.length) {
+    clearTimeout(agentScanTimers.pop());
+  }
+  document.querySelectorAll('.agent-highlight').forEach(el => el.classList.remove('agent-highlight'));
+  document.querySelectorAll('.agent-section-focus').forEach(el => el.classList.remove('agent-section-focus'));
+  document.getElementById('agentMessage')?.classList.remove('scanning');
+}
+function jumpToSection(id, keepAgentOpen) {
+  if(!keepAgentOpen) closeAgent();
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function runSkillsTour() {
+  clearAgentScan();
+  openAgent();
+  setAgentHtml('<strong>Scanning skills...</strong> I am reading the stack like a recruiter would: build ability, product thinking, fintech relevance, and tools.', true);
+  jumpToSection('skills', true);
+
+  const skillsSection = document.getElementById('skills');
+  const prioritySkills = ['HTML / CSS', 'JavaScript', 'REST APIs', 'SQL', 'Figma / UI·UX', 'Git & GitHub', 'Fintech Concepts', 'Digital Banking', 'AI Tools'];
+  skillsSection?.classList.add('agent-section-focus');
+
+  prioritySkills.forEach((skillName, index) => {
+    agentScanTimers.push(setTimeout(() => {
+      const chip = [...document.querySelectorAll('.skill-chip')].find(item => item.textContent.includes(skillName));
+      chip?.classList.add('agent-highlight');
+    }, 450 + index * 170));
+  });
+
+  agentScanTimers.push(setTimeout(() => {
+    setAgentHtml('<strong>Skills ranked for hiring signal:</strong> HTML/CSS and JavaScript show frontend execution. REST APIs and SQL show data/integration thinking. Figma/UI-UX plus Digital Banking and Fintech Concepts make the portfolio stronger for banking technology roles.', false);
+  }, 2200));
+}
+function agentQuickAction(key) {
+  if(key === 'skills') {
+    runSkillsTour();
+    return;
+  }
+  clearAgentScan();
+  setAgentMessage(key);
+  if(['skills', 'projects', 'resume', 'contact'].includes(key)) {
+    setTimeout(() => jumpToSection(key), 550);
+  }
+}
+function askAgent(event) {
+  event.preventDefault();
+  const input = document.getElementById('agentInput');
+  const question = (input.value || '').toLowerCase();
+  let key = 'summary';
+
+  if(question.includes('skill') || question.includes('stack') || question.includes('technology')) key = 'skills';
+  else if(question.includes('project') || question.includes('bank') || question.includes('demo') || question.includes('work')) key = 'projects';
+  else if(question.includes('resume') || question.includes('cv') || question.includes('pdf')) key = 'resume';
+  else if(question.includes('contact') || question.includes('email') || question.includes('hire') || question.includes('reach')) key = 'contact';
+  else if(question.includes('why') || question.includes('fit') || question.includes('chance')) key = 'hire';
+
+  if(key === 'skills') {
+    input.value = '';
+    runSkillsTour();
+    return;
+  }
+
+  clearAgentScan();
+  setAgentMessage(key);
+  if(['projects', 'resume', 'contact'].includes(key)) {
+    setTimeout(() => jumpToSection(key), 650);
+  }
+  input.value = '';
+}
+
 function openModal() {
   document.getElementById('hireModal').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -1484,7 +1913,12 @@ function closeModal() {
 function handleOverlayClick(e) {
   if(e.target === document.getElementById('hireModal')) closeModal();
 }
-document.addEventListener('keydown', e => { if(e.key === 'Escape') closeModal(); });
+document.addEventListener('keydown', e => {
+  if(e.key === 'Escape') {
+    closeModal();
+    closeAgent();
+  }
+});
 
 function submitForm() {
   const name = document.getElementById('fName').value.trim();
