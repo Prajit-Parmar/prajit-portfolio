@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Prajit Parmar — Resume</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --ink: #0d1018;
+    --muted: #4a5568;
+    --accent: #0d6efd;
+    --border: #d1d9e0;
+    --bg: #ffffff;
+  }
+  html { font-size: 10.5pt; }
+  body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: var(--ink);
+    background: var(--bg);
+    max-width: 8.5in;
+    margin: 0 auto;
+    padding: 0.55in 0.6in;
+    line-height: 1.45;
+  }
+
+  /* ── HEADER ── */
+  .header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.35in; border-bottom: 2px solid var(--ink); padding-bottom: 0.15in; }
+  .header-left h1 { font-size: 22pt; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
+  .header-left .tagline { font-size: 10pt; color: var(--muted); margin-top: 4px; font-weight: 400; }
+  .header-right { text-align: right; font-size: 9pt; color: var(--muted); line-height: 1.65; }
+  .header-right a { color: var(--accent); text-decoration: none; }
+  .permit-badge {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 2px 8px;
+    border: 1px solid #198754;
+    border-radius: 12px;
+    font-size: 8pt;
+    color: #198754;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  /* ── SECTIONS ── */
+  section { margin-bottom: 0.25in; }
+  h2 {
+    font-size: 9.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary p { font-size: 10pt; color: #2d3748; line-height: 1.6; }
+
+  /* ── SKILLS ── */
+  .skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 16px; }
+  .skill-row { display: flex; align-items: baseline; gap: 6px; font-size: 9.5pt; }
+  .skill-cat { color: var(--muted); font-weight: 600; white-space: nowrap; min-width: 90px; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.04em; }
+  .skill-list { color: var(--ink); }
+
+  /* ── EXPERIENCE ── */
+  .job { margin-bottom: 14px; }
+  .job-header { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-title { font-weight: 700; font-size: 10.5pt; }
+  .job-date { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+  .job-company { font-size: 9.5pt; color: var(--muted); margin-bottom: 5px; }
+  .job ul { padding-left: 16px; margin-top: 4px; }
+  .job li { font-size: 9.5pt; line-height: 1.55; margin-bottom: 2px; color: #2d3748; }
+  .job li::marker { color: var(--accent); }
+
+  /* ── PROJECTS ── */
+  .project { margin-bottom: 13px; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px; }
+  .project-title { font-weight: 700; font-size: 10.5pt; }
+  .project-url { font-size: 8.5pt; color: var(--accent); text-decoration: none; }
+  .project-stack { font-size: 8.5pt; color: var(--muted); margin-bottom: 3px; }
+  .project ul { padding-left: 16px; margin-top: 3px; }
+  .project li { font-size: 9.5pt; line-height: 1.5; margin-bottom: 2px; color: #2d3748; }
+  .project li::marker { color: var(--accent); }
+
+  /* ── EDUCATION ── */
+  .edu-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .edu-school { font-weight: 700; font-size: 10pt; }
+  .edu-degree { font-size: 9.5pt; color: var(--muted); }
+  .edu-date { font-size: 9pt; color: var(--muted); white-space: nowrap; }
+
+  @media print {
+    body { padding: 0.5in 0.55in; }
+    a { color: inherit; }
+    .header-right a { color: var(--accent); }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-left">
+    <h1>Prajit Parmar</h1>
+    <div class="tagline">Fintech &amp; Web Developer — Banking Technology · Full-Stack · UI/UX</div>
+  </div>
+  <div class="header-right">
+    Brantford, Ontario, Canada<br/>
+    <a href="mailto:3.prajit@gmail.com">3.prajit@gmail.com</a><br/>
+    <a href="https://prajit.it" target="_blank">prajit.it</a> &nbsp;|&nbsp;
+    <a href="https://github.com/Prajit-Parmar" target="_blank">GitHub</a> &nbsp;|&nbsp;
+    <a href="https://linkedin.com/in/prajit-parmar-92705a189" target="_blank">LinkedIn</a><br/>
+    <span class="permit-badge">Valid Canadian Work Permit</span>
+  </div>
+</header>
+
+<!-- PROFESSIONAL SUMMARY -->
+<section class="summary">
+  <h2>Professional Summary</h2>
+  <p>
+    Fintech and web developer with a B.Tech in Computer Engineering and a Web Development Diploma from Conestoga College.
+    Builds production-quality prototypes that demonstrate end-to-end product thinking: from AngularJS banking dashboards
+    and React/Next.js real-estate platforms to healthcare management UIs. Brings hands-on experience across the full stack
+    (Node.js, REST APIs, SQL, TypeScript) combined with UI/UX design skills from an internship at Alien Software and
+    customer-facing leadership at scale. Actively targeting fintech, banking technology, and web development roles in Canada.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Technical Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-row"><span class="skill-cat">Frontend</span><span class="skill-list">HTML, CSS, JavaScript, TypeScript, React, Next.js, AngularJS</span></div>
+    <div class="skill-row"><span class="skill-cat">Backend</span><span class="skill-list">Node.js, REST APIs, Express (routing &amp; middleware)</span></div>
+    <div class="skill-row"><span class="skill-cat">Styling</span><span class="skill-list">Tailwind CSS, Framer Motion, responsive layouts, CSS animations</span></div>
+    <div class="skill-row"><span class="skill-cat">Database</span><span class="skill-list">SQL, LocalStorage, JSON data modelling</span></div>
+    <div class="skill-row"><span class="skill-cat">Design</span><span class="skill-list">Figma, UI/UX design, wireframing, design systems</span></div>
+    <div class="skill-row"><span class="skill-cat">Dev Tools</span><span class="skill-list">Git, GitHub, VS Code, GitHub Pages, npm/bun</span></div>
+    <div class="skill-row"><span class="skill-cat">Domain</span><span class="skill-list">Digital banking UX, fintech product concepts, financial dashboards</span></div>
+    <div class="skill-row"><span class="skill-cat">Productivity</span><span class="skill-list">Excel, Google Sheets, data entry and reporting, AI tools</span></div>
+    <div class="skill-row"><span class="skill-cat">Methodology</span><span class="skill-list">Agile/Scrum, cross-functional collaboration, feedback-driven iteration</span></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+  <h2>Projects</h2>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-title">NorthStar CAD Bank &mdash; Canadian Online Banking Prototype</span>
+      <a class="project-url" href="https://prajit-parmar.github.io/northstar-cad-bank/" target="_blank">prajit-parmar.github.io/northstar-cad-bank</a>
+    </div>
+    <div class="project-stack">AngularJS · Node.js · JavaScript · CSS · HTML</div>
+    <ul>
+      <li>Built a full Canadian retail banking prototype with authenticated login for five dummy accounts, CAD chequing and savings balances, credit card views, E-Transfer send/receive flows, biometric login toggle, offers, FAQ help section, and a profile screen.</li>
+      <li>Designed the dashboard to prioritize account clarity and transaction confidence — the same UX goals real Canadian banks optimize for in retail digital channels.</li>
+      <li>Implemented stateful single-page application logic in AngularJS with LocalStorage persistence, realistic balance calculations, and form-driven workflows so the prototype reads as a product, not a mockup.</li>
+      <li>Deployed live on GitHub Pages; includes Node.js server structure for local development at port 3000.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-title">Maple Crest Developments &mdash; Real Estate Developer Website</span>
+      <a class="project-url" href="https://prajit-parmar.github.io/Maple-Crest/" target="_blank">prajit-parmar.github.io/Maple-Crest</a>
+    </div>
+    <div class="project-stack">Next.js · React · TypeScript · Framer Motion · Tailwind CSS</div>
+    <ul>
+      <li>Built a polished Canadian real-estate developer website presenting premium residential and mixed-use communities with project discovery, viewing booking flows, and lead capture.</li>
+      <li>Used reusable React components, TypeScript type safety, Framer Motion animations, and Tailwind CSS to deliver a responsive, production-quality design system.</li>
+      <li>Architected the information hierarchy to guide visitors from brand impression → project browsing → contact conversion, mirroring real developer site goals.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-title">Aurora Health Systems &mdash; Hospital Management Dashboard</span>
+      <a class="project-url" href="https://prajit-parmar.github.io/arorahealth/" target="_blank">prajit-parmar.github.io/arorahealth</a>
+    </div>
+    <div class="project-stack">HTML · CSS · JavaScript · Node.js · Role-Based Access Control</div>
+    <ul>
+      <li>Designed a front-end hospital management prototype for a Canadian general hospital model with six role-based login accounts (admin, executive, doctor, nurse, front desk, patient).</li>
+      <li>Each role surfaces a tailored dashboard: ICU vitals and patient records for clinical staff, billing and scheduling for front desk, executive KPIs for leadership, and appointment views for patients.</li>
+      <li>Demonstrates ability to design multi-persona systems with secure access boundaries and domain-specific UX — skills applicable to healthcare tech, insurance platforms, and enterprise SaaS.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-header">
+      <span class="project-title">Personal Finance Tracker &mdash; Browser-Based Budgeting Tool</span>
+      <a class="project-url" href="https://prajit.it/#projects" target="_blank">prajit.it (Live Demo)</a>
+    </div>
+    <div class="project-stack">HTML · CSS · JavaScript · LocalStorage</div>
+    <ul>
+      <li>Built a standalone browser-based budgeting app for logging income and expenses, categorizing transactions, and tracking net cash flow — no backend required, data persists via LocalStorage.</li>
+      <li>Designed with the same clarity standards banks apply to customer-facing financial dashboards: category breakdown, running totals, and clean data entry flows.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Work Experience</h2>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">Shift Manager</span>
+      <span class="job-date">Mar 2024 — Present</span>
+    </div>
+    <div class="job-company">Pizza Hut &nbsp;&middot;&nbsp; Brantford, Ontario</div>
+    <ul>
+      <li>Managed store operations and led a team of 25+ employees and 10+ drivers across high-volume weekend shifts, maintaining consistent service quality and training standards.</li>
+      <li>Contributed to a ~99% projected sales hit rate by coaching staff on upselling, order accuracy, and customer satisfaction techniques.</li>
+      <li>Resolved 3+ customer complaints per shift with a calm, solution-first approach — directly applicable to client-facing tech support and escalation workflows.</li>
+      <li>Built operational credibility by working every station before promotion — demonstrating accountability, initiative, and cross-functional understanding.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <span class="job-title">UI/UX Design Intern</span>
+      <span class="job-date">During B.Tech (2020–2022)</span>
+    </div>
+    <div class="job-company">Alien Software &nbsp;&middot;&nbsp; Anand, Gujarat, India</div>
+    <ul>
+      <li>Collaborated across front-end, back-end, and QA teams to deliver design updates through iterative feedback cycles on multiple concurrent projects.</li>
+      <li>Participated in 50+ client and tester meetings to gather requirements, refine designs, and align deliverables with business expectations.</li>
+      <li>Applied repeated revision cycles to maximize output quality — building the habits of design critique, stakeholder communication, and attention to UX detail.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section>
+  <h2>Education</h2>
+  <div class="edu-row">
+    <div>
+      <div class="edu-school">Conestoga College &nbsp;&mdash;&nbsp; Brantford, Ontario</div>
+      <div class="edu-degree">Web Development Diploma</div>
+    </div>
+    <div class="edu-date">2023 – 2024</div>
+  </div>
+  <div class="edu-row">
+    <div>
+      <div class="edu-school">A.D. Patel Institute of Technology &nbsp;&mdash;&nbsp; Gujarat, India</div>
+      <div class="edu-degree">B.Tech, Computer Engineering</div>
+    </div>
+    <div class="edu-date">2019 – 2023</div>
+  </div>
+</section>
+
+</body>
+</html>
