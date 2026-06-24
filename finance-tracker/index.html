@@ -855,7 +855,7 @@
               <button type="button" data-view="transactions">Log</button>
               <button type="button" data-view="budgets">Budget</button>
               <button type="button" data-view="insights">Charts</button>
-              <button type="button" id="resetDemoPhone">Reset</button>
+              <button type="button" id="resetDemoPhone">Demo</button>
             </nav>
           </section>
         </div>
@@ -875,7 +875,7 @@
             <div class="section-title">
               <h2>Add Transaction</h2>
             </div>
-            <p class="description">Create demo income and expense records. Your changes stay in this browser through localStorage.</p>
+            <p class="description">Log income and expenses. Data lives in your browser (localStorage). Use "Load Demo Data" to restore the 15 sample transactions.</p>
             <div class="segment" aria-label="Transaction type">
               <button class="active" type="button" data-type="expense">Expense</button>
               <button type="button" data-type="income">Income</button>
@@ -900,8 +900,8 @@
                 <input id="date" type="date" required />
               </div>
               <div class="actions">
-                <button class="primary" type="submit">Add</button>
-                <button class="secondary" type="button" id="resetDemo">Reset</button>
+                <button class="primary" type="submit">Add Transaction</button>
+                <button class="secondary" type="button" id="resetDemo">Load Demo Data</button>
               </div>
             </form>
           </aside>
@@ -962,14 +962,21 @@
       Other: 500
     };
     const seed = [
-      { id: 1, title: "Monthly salary", amount: 4200, type: "income", category: "Salary", date: "2026-05-01" },
-      { id: 2, title: "Rent payment", amount: 1450, type: "expense", category: "Rent", date: "2026-05-02" },
-      { id: 3, title: "Coffee & snacks", amount: 25, type: "expense", category: "Food & Dining", date: "2026-05-05" },
-      { id: 4, title: "BigBasket grocery", amount: 200, type: "expense", category: "Grocery", date: "2026-05-07" },
-      { id: 5, title: "Uber ride", amount: 110, type: "expense", category: "Transportation", date: "2026-05-11" },
-      { id: 6, title: "Sneakers", amount: 200, type: "expense", category: "Shopping", date: "2026-05-13" },
-      { id: 7, title: "Lunch with team", amount: 300, type: "expense", category: "Food & Dining", date: "2026-05-15" },
-      { id: 8, title: "Freelance deposit", amount: 950, type: "income", category: "Salary", date: "2026-05-18" }
+      { id: 1,  title: "Monthly salary",       amount: 4200, type: "income",  category: "Salary",         date: "2026-05-01" },
+      { id: 2,  title: "Rent payment",         amount: 1450, type: "expense", category: "Rent",           date: "2026-05-02" },
+      { id: 3,  title: "Monthly grocery run",  amount: 215,  type: "expense", category: "Grocery",        date: "2026-05-04" },
+      { id: 4,  title: "Coffee & snacks",      amount: 28,   type: "expense", category: "Food & Dining",  date: "2026-05-05" },
+      { id: 5,  title: "Bus pass — monthly",   amount: 85,   type: "expense", category: "Transportation", date: "2026-05-07" },
+      { id: 6,  title: "Gym membership",       amount: 45,   type: "expense", category: "Entertainment",  date: "2026-05-08" },
+      { id: 7,  title: "Grocery top-up",       amount: 62,   type: "expense", category: "Grocery",        date: "2026-05-10" },
+      { id: 8,  title: "Uber ride",            amount: 22,   type: "expense", category: "Transportation", date: "2026-05-11" },
+      { id: 9,  title: "Lunch with team",      amount: 38,   type: "expense", category: "Food & Dining",  date: "2026-05-13" },
+      { id: 10, title: "Freelance deposit",    amount: 950,  type: "income",  category: "Salary",         date: "2026-05-15" },
+      { id: 11, title: "New headphones",       amount: 130,  type: "expense", category: "Shopping",       date: "2026-05-16" },
+      { id: 12, title: "Movie night",          amount: 32,   type: "expense", category: "Entertainment",  date: "2026-05-18" },
+      { id: 13, title: "Weekly groceries",     amount: 88,   type: "expense", category: "Grocery",        date: "2026-05-21" },
+      { id: 14, title: "Transfer to savings",  amount: 400,  type: "expense", category: "Savings",        date: "2026-05-25" },
+      { id: 15, title: "Restaurant dinner",    amount: 74,   type: "expense", category: "Food & Dining",  date: "2026-05-28" }
     ];
 
     let transactions = JSON.parse(localStorage.getItem(storeKey) || "null") || seed.map(item => ({ ...item }));

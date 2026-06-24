@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Prajit Parmar | Fintech & Web Developer — Canada</title>
+<title>Prajit Parmar | Junior Web Developer — Canada</title>
 <meta name="theme-color" content="#37e6c1"/>
-<meta name="description" content="Prajit Parmar — Fintech & Web Developer in Canada. Builds banking prototypes, real-estate platforms, and financial tools. Open to fintech, banking tech, and web dev roles."/>
+<meta name="description" content="Prajit Parmar — Junior Web Developer with UI/UX experience in Canada. Builds responsive web apps, financial-product prototypes, and dashboards. Open to web dev, front-end, and digital-product roles."/>
 <meta name="robots" content="index, follow"/>
 <link rel="canonical" href="https://prajit.it/"/>
 <!-- Open Graph -->
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://prajit.it/"/>
-<meta property="og:title" content="Prajit Parmar | Fintech & Web Developer"/>
-<meta property="og:description" content="Portfolio featuring NorthStar CAD Bank, Maple Crest Developments, and more. Open to fintech, banking tech, and web dev roles in Canada."/>
+<meta property="og:title" content="Prajit Parmar | Junior Web Developer"/>
+<meta property="og:description" content="Portfolio featuring NorthStar CAD Bank, Maple Crest, Personal Finance Tracker, and Aurora Health. Open to junior web dev and front-end roles in Canada."/>
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Prajit Parmar | Fintech & Web Developer"/>
-<meta name="twitter:description" content="Fintech portfolio: NorthStar CAD Bank, Maple Crest, and more. Available for roles in Canada."/>
+<meta name="twitter:title" content="Prajit Parmar | Junior Web Developer"/>
+<meta name="twitter:description" content="Junior web developer with UI/UX background. NorthStar CAD Bank, Maple Crest, Finance Tracker. Available for roles in Canada."/>
 <!-- Preconnect for fonts — eliminates round-trip latency before font fetch -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -159,6 +159,12 @@
     animation: fadeUp .8s .2s ease both;
   }
   .hero-sub span { color: var(--cyan); }
+  .hero-stack {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .82rem; font-weight: 500; letter-spacing: .06em;
+    color: rgba(246,247,251,0.42); margin-top: .9rem;
+    animation: fadeUp .8s .25s ease both;
+  }
   .hero-actions { display: flex; gap: 1rem; margin-top: 2.4rem; animation: fadeUp .8s .3s ease both; flex-wrap: wrap; align-items: flex-start; }
   .btn-primary { padding: .8rem 2rem; background: var(--cyan); color: var(--bg); font-family: 'Syne', sans-serif; font-weight: 700; font-size: .9rem; letter-spacing: .04em; border: none; border-radius: 4px; cursor: pointer; transition: all .25s; text-decoration: none; display: inline-block; }
   .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(0,212,255,0.25); background: #33deff; }
@@ -216,6 +222,19 @@
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; max-width: 1100px; margin: 0 auto; }
   .about-text p { color: var(--muted); line-height: 1.8; font-size: 1rem; margin-bottom: 1.2rem; }
   .about-text p span { color: var(--white); font-weight: 500; }
+  .about-interest {
+    background: rgba(55, 230, 193, .06);
+    border: 1px solid rgba(55, 230, 193, .18);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    margin: 1rem 0 1.4rem;
+  }
+  .interest-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: .5rem;
+  }
+  .about-interest p { font-size: .9rem !important; margin-bottom: 0 !important; }
   .education-list { display: grid; gap: .8rem; margin: 1.6rem 0 .4rem; }
   .education-card {
     padding: 1rem 1.1rem;
@@ -268,7 +287,14 @@
 
   /* ── SKILLS ── */
   #skills { background: var(--bg); }
-  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 1rem; max-width: 1000px; margin: 0 auto; }
+  .skills-categories { display: grid; gap: 2.5rem; max-width: 1000px; margin: 0 auto; }
+  .skill-cat-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+    color: var(--cyan); margin-bottom: .8rem;
+  }
+  .skill-category .skills-grid { max-width: none; margin: 0; }
+  .skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .75rem; }
   .skill-chip {
     padding: 1rem 1.2rem;
     border: 1px solid var(--border);
@@ -343,7 +369,15 @@
   .status-live { background: rgba(0,212,255,0.1); color: var(--cyan); border: 1px solid rgba(0,212,255,0.2); }
   .status-dot { width: 5px; height: 5px; border-radius: 50%; background: currentColor; animation: pulse 2s infinite; }
   .project-title { font-family: 'Syne', sans-serif; font-size: 1.15rem; font-weight: 700; color: var(--white); margin-bottom: .6rem; }
-  .project-desc { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: 1.2rem; overflow-wrap: break-word; }
+  .project-desc { font-size: .88rem; color: var(--muted); line-height: 1.65; margin-bottom: .6rem; overflow-wrap: break-word; }
+  .project-disclaimer {
+    font-size: .73rem; color: rgba(246,247,251,.32); line-height: 1.4; margin-bottom: 1rem;
+    border-left: 2px solid rgba(246,247,251,.12); padding-left: .5rem;
+  }
+  .disclaimer-note {
+    font-size: .75rem; color: rgba(246,247,251,.35); line-height: 1.5; margin-top: .75rem;
+    border-left: 2px solid rgba(55,230,193,.2); padding-left: .6rem;
+  }
   .project-tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.2rem; }
   .tag { font-size: .72rem; padding: .2rem .6rem; border: 1px solid var(--border); border-radius: 4px; color: var(--muted); }
   .project-link {
@@ -1532,7 +1566,7 @@
     </div>
     <div class="nav-logo-text">
       <span class="nav-logo-name">Prajit Parmar</span>
-      <span class="nav-logo-role">Fintech Dev</span>
+      <span class="nav-logo-role">Junior Dev</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -1581,18 +1615,18 @@
   <div class="hero-orb orb2"></div>
 
   <div class="hero-content">
-    <div class="hero-badge"><span class="badge-dot"></span>Available for Opportunities</div>
+    <div class="hero-badge"><span class="badge-dot"></span>Open to Junior Web Dev Roles in Canada</div>
     <h1 class="hero-name">
       Prajit<br>
       <span class="line2">Parmar</span>
     </h1>
     <p class="hero-sub">
-      <span>Fintech & Web Developer</span> — building bridges between<br>
-      financial technology and elegant user experiences.
+      <span>Junior Web Developer</span> with UI/UX experience — building responsive web apps, dashboards, and financial-product prototypes.
     </p>
+    <p class="hero-stack">JavaScript · TypeScript · React · Next.js · Node.js · SQL · Figma</p>
     <div class="hero-actions">
-      <a href="#projects" class="btn-primary">View My Work</a>
-      <a href="#contact" class="btn-ghost">Get In Touch</a>
+      <a href="#projects" class="btn-primary">View Featured Projects</a>
+      <a href="Prajit_Parmar_Resume.pdf" download class="btn-ghost">Download Résumé</a>
     </div>
     <div class="hero-socials">
       <a href="https://linkedin.com/in/prajit-parmar-92705a189" target="_blank" class="social-link">
@@ -1659,27 +1693,31 @@
   <h2 class="section-title reveal">About <span>Me</span></h2>
   <div class="about-grid">
     <div class="about-text reveal-left">
-      <p>I'm <span>Prajit Parmar</span>, a Computer Engineering graduate and Conestoga College Web Development diploma holder, now building my path in <span>fintech and banking technology</span> in Canada.</p>
-      <p>My strongest proof point is <span>NorthStar CAD Bank</span>, a Canadian online banking prototype that brings together product thinking, backend flow, and frontend experience in one build.</p>
-      <p>My background bridges <span>technical development</span> and <span>UI/UX design</span> - I interned at Alien Software as a UI/UX Designer during my B.Tech, and I now lead shift operations at Pizza Hut, which sharpened training, communication, and problem solving.</p>
+      <p>I am a <span>junior web developer</span> with a Computer Engineering background and hands-on UI/UX design experience. I build responsive web applications and interactive product prototypes using <span>JavaScript, TypeScript, React, Next.js, Node.js, SQL, and Figma</span>.</p>
+      <p>My recent projects explore <span>digital banking</span>, personal finance, healthcare workflows, and customer-facing platforms. I enjoy turning complex information into clear, useful, and confident user experiences.</p>
+      <p>Alongside my technical work, leading high-volume shifts has strengthened my <span>communication, prioritization, customer problem-solving, and team leadership</span>.</p>
+      <div class="about-interest reveal">
+        <div class="interest-label">Why Financial Products</div>
+        <p>I am especially interested in financial-product design because small usability improvements can make high-stakes decisions clearer. My work explores account dashboards, budgeting tools, transaction flows, and customer experiences that help people feel more informed and confident.</p>
+      </div>
       <div class="education-list" aria-label="Education">
         <div class="education-card">
           <div class="education-school">Conestoga College</div>
-          <div class="education-degree">Web Development Diploma</div>
+          <div class="education-degree">Web Development Diploma · 2023–2024</div>
         </div>
         <div class="education-card">
           <div class="education-school">A.D. Patel Institute of Technology</div>
-          <div class="education-degree">B.Tech, Computer Engineering</div>
+          <div class="education-degree">B.Tech, Computer Engineering · 2019–2023</div>
         </div>
       </div>
       <div class="about-stats">
         <div class="stat-card">
-          <div class="stat-num">50+</div>
-          <div class="stat-label">Full Case Studies</div>
+          <div class="stat-num">2</div>
+          <div class="stat-label">Featured Case Studies</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">1</div>
-          <div class="stat-label">Banking Prototype</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">Live Projects</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">25+</div>
@@ -1687,7 +1725,7 @@
         </div>
         <div class="stat-card">
           <div class="stat-num">50+</div>
-          <div class="stat-label">Client/Tester Meetings</div>
+          <div class="stat-label">Client Meetings</div>
         </div>
       </div>
     </div>
@@ -1698,7 +1736,7 @@
         <span class="orbit-dot"></span>
         <div class="avatar-inner">
           PP
-          <span class="init-sub">Fintech Dev</span>
+          <span class="init-sub">Web Dev</span>
         </div>
       </div>
     </div>
@@ -1709,24 +1747,47 @@
 <section id="skills">
   <div class="section-label">What I Know</div>
   <h2 class="section-title reveal">Technical <span>Skills</span></h2>
-  <div class="skills-grid">
-    <div class="skill-chip reveal"><div class="skill-icon">🌐</div><div class="skill-name">HTML / CSS</div><div class="skill-type">Frontend</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">⚡</div><div class="skill-name">JavaScript</div><div class="skill-type">Frontend</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🔗</div><div class="skill-name">REST APIs</div><div class="skill-type">Integration</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🗄️</div><div class="skill-name">SQL</div><div class="skill-type">Database</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">☕</div><div class="skill-name">Java</div><div class="skill-type">Language</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🎨</div><div class="skill-name">Figma / UI·UX</div><div class="skill-type">Design</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🐙</div><div class="skill-name">Git & GitHub</div><div class="skill-type">Version Control</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">💳</div><div class="skill-name">Fintech Concepts</div><div class="skill-type">Domain</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">📊</div><div class="skill-name">Excel / Sheets</div><div class="skill-type">Data</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🚀</div><div class="skill-name">Agile / Scrum</div><div class="skill-type">Methodology</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🏦</div><div class="skill-name">Digital Banking</div><div class="skill-type">Domain</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🤖</div><div class="skill-name">AI Tools</div><div class="skill-type">Productivity</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">⚛️</div><div class="skill-name">React</div><div class="skill-type">Frontend</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🔷</div><div class="skill-name">TypeScript</div><div class="skill-type">Language</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">▲</div><div class="skill-name">Next.js</div><div class="skill-type">Framework</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">🟩</div><div class="skill-name">Node.js</div><div class="skill-type">Backend</div></div>
-    <div class="skill-chip reveal"><div class="skill-icon">💻</div><div class="skill-name">VS Code</div><div class="skill-type">Tools</div></div>
+  <div class="skills-categories">
+    <div class="skill-category reveal">
+      <div class="skill-cat-label">Core Development</div>
+      <div class="skills-grid">
+        <div class="skill-chip"><div class="skill-icon">🌐</div><div class="skill-name">HTML / CSS</div><div class="skill-type">Frontend</div></div>
+        <div class="skill-chip"><div class="skill-icon">⚡</div><div class="skill-name">JavaScript</div><div class="skill-type">Language</div></div>
+        <div class="skill-chip"><div class="skill-icon">🔷</div><div class="skill-name">TypeScript</div><div class="skill-type">Language</div></div>
+        <div class="skill-chip"><div class="skill-icon">⚛️</div><div class="skill-name">React</div><div class="skill-type">Framework</div></div>
+        <div class="skill-chip"><div class="skill-icon">▲</div><div class="skill-name">Next.js</div><div class="skill-type">Framework</div></div>
+        <div class="skill-chip"><div class="skill-icon">🅰️</div><div class="skill-name">AngularJS</div><div class="skill-type">Framework</div></div>
+        <div class="skill-chip"><div class="skill-icon">🟩</div><div class="skill-name">Node.js</div><div class="skill-type">Backend</div></div>
+        <div class="skill-chip"><div class="skill-icon">🔗</div><div class="skill-name">REST APIs</div><div class="skill-type">Integration</div></div>
+        <div class="skill-chip"><div class="skill-icon">🗄️</div><div class="skill-name">SQL</div><div class="skill-type">Database</div></div>
+      </div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-label">Product &amp; UX</div>
+      <div class="skills-grid">
+        <div class="skill-chip"><div class="skill-icon">🎨</div><div class="skill-name">Figma</div><div class="skill-type">Design</div></div>
+        <div class="skill-chip"><div class="skill-icon">📐</div><div class="skill-name">Wireframing</div><div class="skill-type">UX</div></div>
+        <div class="skill-chip"><div class="skill-icon">💅</div><div class="skill-name">Tailwind CSS</div><div class="skill-type">Styling</div></div>
+        <div class="skill-chip"><div class="skill-icon">🎬</div><div class="skill-name">Framer Motion</div><div class="skill-type">Animation</div></div>
+        <div class="skill-chip"><div class="skill-icon">📱</div><div class="skill-name">Responsive Design</div><div class="skill-type">Mobile-first</div></div>
+      </div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-label">Tools</div>
+      <div class="skills-grid">
+        <div class="skill-chip"><div class="skill-icon">🐙</div><div class="skill-name">Git &amp; GitHub</div><div class="skill-type">Version Control</div></div>
+        <div class="skill-chip"><div class="skill-icon">💻</div><div class="skill-name">VS Code</div><div class="skill-type">Editor</div></div>
+        <div class="skill-chip"><div class="skill-icon">🚀</div><div class="skill-name">Agile / Scrum</div><div class="skill-type">Methodology</div></div>
+      </div>
+    </div>
+    <div class="skill-category reveal">
+      <div class="skill-cat-label">Domain Interests</div>
+      <div class="skills-grid">
+        <div class="skill-chip"><div class="skill-icon">🏦</div><div class="skill-name">Digital Banking</div><div class="skill-type">Fintech</div></div>
+        <div class="skill-chip"><div class="skill-icon">💳</div><div class="skill-name">Financial UX</div><div class="skill-type">Product</div></div>
+        <div class="skill-chip"><div class="skill-icon">🏥</div><div class="skill-name">Healthcare UX</div><div class="skill-type">Product</div></div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1741,26 +1802,23 @@
       <div class="timeline-role">Shift Manager</div>
       <div class="timeline-company">Pizza Hut · Brantford, Ontario</div>
       <ul class="timeline-bullets">
-        <li>Trained 25+ employees and 10+ drivers to support consistent store operations and customer service standards.</li>
-        <li>Worked across every station in the store to build strong operational knowledge before and during promotion to Shift Manager.</li>
-        <li>Supported weekend day shifts and helped the store meet projected sales targets by maintaining high service quality and using upselling methods.</li>
-        <li>Contributed to nearly 99% projected sales hit rate by focusing on customer satisfaction, order accuracy, and effective upselling.</li>
-        <li>Handled 3+ customer complaints per day with a calm, solution-focused approach.</li>
-        <li>Coached staff, supported busy shifts, and maintained accountability across operations to keep service running smoothly.</li>
+        <li>Promoted from Crew Member to Shift Manager after demonstrating strong operational ownership and team support.</li>
+        <li>Trained 25+ employees and delivery drivers on customer service, order accuracy, safety, and operational standards.</li>
+        <li>Supported payment reconciliation and cash balancing at shift close.</li>
+        <li>Managed customer escalations during high-volume shifts using calm, solution-oriented communication.</li>
+        <li>Coordinated kitchen, front-counter, and delivery workflows to maintain service quality during peak periods.</li>
       </ul>
     </div>
     <div class="timeline-item reveal">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">During B.Tech</div>
+      <div class="timeline-date">During B.Tech · 2019–2023</div>
       <div class="timeline-role">UI/UX Design Intern</div>
       <div class="timeline-company">Alien Software · Anand, Gujarat, India</div>
       <ul class="timeline-bullets">
-        <li>Worked across front-end, back-end, and testing teams to support project delivery and cross-functional collaboration.</li>
-        <li>Participated in 50+ meetings with clients and testers to refine requirements and improve project outcomes.</li>
-        <li>Followed repeated revision and feedback cycles to maximize output on assigned projects.</li>
-        <li>Contributed to design, development, testing coordination, and implementation updates across multiple project stages.</li>
-        <li>Improved overall performance through consistent collaboration, attention to detail, and a willingness to learn new tools and workflows.</li>
-        <li>Continued building UI knowledge and updating design skills to strengthen current and future project work.</li>
+        <li>Designed wireframes and high-fidelity interfaces for web and mobile projects using Figma.</li>
+        <li>Collaborated with front-end, back-end, and QA teammates to prepare designs for implementation.</li>
+        <li>Participated in client feedback sessions and revised layouts based on usability and business requirements.</li>
+        <li>Organized design files, interaction notes, and feedback updates to support developer handoff.</li>
       </ul>
     </div>
   </div>
@@ -1794,11 +1852,12 @@
     <div class="featured-info">
       <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live Demo Available</div>
       <div class="featured-title">NorthStar CAD Bank</div>
-      <div class="featured-desc">A Canadian online banking prototype built with <strong style="color:var(--white)">AngularJS, Node.js, and JavaScript</strong>. It demonstrates authenticated dummy users, CAD account balances, credit products, E-Transfer flows, biometric login controls, support content, and a profile experience. The build also includes Node-powered server structure, stateful interactions, and form-driven workflows so it reads like a product, not a static page.</div>
+      <div class="featured-desc">A Canadian online banking prototype built with <strong style="color:var(--white)">AngularJS, Node.js, and JavaScript</strong>. It demonstrates seeded demo accounts, CAD account balances, credit product views, E-Transfer flows, biometric login toggle, support content, and profile screens. Stateful single-page application logic with LocalStorage persistence and form-driven transaction workflows.</div>
       <div class="case-study">
-        <div class="case-study-label">Mini Case Study</div>
+        <div class="case-study-label">Project Overview</div>
         <p>I built NorthStar around the decisions a Canadian banking user needs to make quickly: checking balances, understanding credit exposure, completing transfers with confidence, and finding support without breaking the flow.</p>
-        <p>The interface emphasizes dashboard scanning, CAD-first copy, realistic dummy accounts, and clear transaction states. I also built it to show product structure, backend flow, and iterative improvements, so it reads as a full case study rather than a one-screen mockup.</p>
+        <p>The interface emphasizes dashboard scanning, CAD-first copy, realistic dummy accounts, and clear transaction states — built to demonstrate product thinking and UX decisions, not real banking infrastructure.</p>
+        <p class="disclaimer-note">Portfolio prototype using seeded demo data. No real banking, authentication, payments, or customer information.</p>
       </div>
       <div class="featured-highlights">
         <div class="featured-highlight">
@@ -1856,11 +1915,12 @@
     <div class="featured-info">
       <div class="featured-badge"><span class="status-dot" style="background:var(--cyan);animation:pulse 2s infinite"></span>Live on GitHub</div>
       <div class="featured-title">Maple Crest Developments</div>
-      <div class="featured-desc">A polished Canadian real-estate developer website built with <strong style="color:var(--white)">Next.js, React, Framer Motion, and Tailwind CSS</strong>. It presents premium residential and mixed-use developments, featured communities, booking and inquiry flows, and a modern brand presence for Maple Crest. The build uses reusable components, responsive layouts, motion, and content structure so the site feels like a real product system, not just a static brochure.</div>
+      <div class="featured-desc">A fictional real-estate developer portfolio site built with <strong style="color:var(--white)">Next.js, React, Framer Motion, and Tailwind CSS</strong>. Features simulated community listings, project discovery pages, booking and inquiry flows, and a consistent design system with smooth animations. Built with reusable components, TypeScript type safety, and mobile-first responsive layouts.</div>
       <div class="case-study">
-        <div class="case-study-label">Mini Case Study</div>
+        <div class="case-study-label">Project Overview</div>
         <p>I shaped Maple Crest to feel like a premium development brand: strong hero messaging, clear project discovery, and a path from browsing communities to booking a viewing or contacting the team.</p>
-        <p>The interface balances architectural imagery, motion, and structured project data. I continue refining the UI as I learn more so the experience stays polished, usable, and recruiter-ready.</p>
+        <p>The interface balances Framer Motion animations, structured project data, and a conversion-focused information architecture — demonstrating what modern real estate web UX looks and feels like.</p>
+        <p class="disclaimer-note">Fictional portfolio project. All company, listing, project, resident, and property data is simulated.</p>
       </div>
       <div class="featured-highlights">
         <div class="featured-highlight">
@@ -1894,21 +1954,23 @@
   </div>
 
   <p class="projects-note reveal">
-    <span>Portfolio standard:</span> NorthStar CAD Bank and Maple Crest Developments are the two featured case studies. The Personal Finance Tracker and Aurora Health Systems prototype are live demos showing financial UX and healthcare dashboard design.
+    <span>4 live projects:</span> NorthStar CAD Bank and Maple Crest are the two featured project overviews. The Personal Finance Tracker and Aurora Health Systems are live demos showing financial UX and multi-role dashboard design.
   </p>
 
   <div class="projects-grid">
     <a href="finance-tracker/" class="project-card reveal" aria-label="Open Personal Finance Tracker live demo">
       <div class="project-status status-live"><span class="status-dot"></span>Live</div>
       <div class="project-title">Personal Finance Tracker</div>
-      <div class="project-desc">A browser-based budgeting tool to log income and expenses, categorize transactions, track net cash flow, and review spending patterns. It frames everyday money management with the same clarity banks aim for in customer-facing dashboards.</div>
+      <div class="project-desc">A browser-based budgeting tool to log income and expenses, categorize transactions, track net cash flow, and review spending patterns — built in the browser with LocalStorage and no external dependencies.</div>
+      <p class="project-disclaimer">All data stays in your browser (LocalStorage). No accounts, no backend.</p>
       <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">LocalStorage</span><span class="tag">Fintech UX</span></div>
       <span class="project-link">Open Live Demo →</span>
     </a>
     <a href="https://prajit-parmar.github.io/arorahealth/" target="_blank" class="project-card reveal" aria-label="Open Aurora Health Systems demo">
       <div class="project-status status-live"><span class="status-dot"></span>Live</div>
       <div class="project-title">Aurora Health Systems</div>
-      <div class="project-desc">A hospital management dashboard prototype with role-based access for admins, doctors, nurses, front desk, and patients. Demonstrates ICU vitals, appointment scheduling, billing flows, patient records, and secure login — scoped to a Canadian general hospital model.</div>
+      <div class="project-desc">An educational healthcare dashboard prototype with six simulated role personas: administrator, executive, doctor, nurse, front desk, and patient — each with a tailored UI for ICU vitals, scheduling, billing, and records.</div>
+      <p class="project-disclaimer">Educational prototype using fictional data and simulated role-based dashboard experiences.</p>
       <div class="project-tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Healthcare UX</span></div>
       <span class="project-link">Open Live Demo →</span>
     </a>
@@ -1922,7 +1984,7 @@
   <div class="resume-panel reveal">
     <div class="resume-copy">
       <h3>Need the quick version?</h3>
-      <p>Download my updated resume as a PDF. It uses the same wording as this portfolio and highlights two full case studies, product thinking, banking workflow design, and hands-on internship collaboration.</p>
+      <p>Download my updated resume as a PDF. It highlights my JavaScript, TypeScript, and React projects, UI/UX design background, Conestoga Web Development diploma, and team leadership experience.</p>
       <div class="resume-chip">Same wording across website and PDF</div>
       <div class="resume-links">
         <a href="https://prajit.it" target="_blank" class="resume-link">Website: prajit.it</a>
@@ -1942,8 +2004,8 @@
   <div class="section-label">Let's Connect</div>
   <h2 class="section-title reveal" style="text-align:center;">Open to <span>Opportunities</span></h2>
   <div class="contact-inner reveal">
-    <p>I'm actively looking for roles in <strong style="color:var(--white)">fintech, banking technology, or web development</strong>. Whether it's an entry-level tech role at a bank, a fintech startup, or a dev position — let's talk.</p>
-    <p class="work-permit">Work authorization: valid Canadian work permit. Available for roles in Canada, remote, hybrid, or in-person.</p>
+    <p>I'm actively looking for <strong style="color:var(--white)">junior web development, front-end development, or digital-product roles in Canada</strong>. Whether it's a startup, an agency, or a financial tech company — let's talk.</p>
+    <p class="work-permit">Work authorization: valid Canadian work permit. Available for roles in Canada (remote, hybrid, or in-person).</p>
     <div class="contact-links">
       <a href="mailto:3.prajit@gmail.com" class="contact-btn">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -1962,7 +2024,7 @@
 </section>
 
 <section id="ai-profile-summary" class="sr-only" aria-label="AI-readable candidate summary">
-  Prajit Parmar is a fintech and web development candidate based in Brantford, Ontario, Canada with a valid Canadian work permit. Skills include HTML, CSS, JavaScript, Node.js, UI/UX design, Figma, Git, GitHub, Excel, Google Sheets, fintech concepts, digital banking, and Agile/Scrum. At Pizza Hut, he trained 25+ employees and 10+ drivers, worked across every station, handled 3+ complaints per day, supported weekend day shifts, and helped the store hit projected sales on nearly 99% of shifts through strong customer service and upselling. During his UI/UX internship at Alien Software, he worked across front-end, back-end, and testing teams, joined 50+ client and tester meetings, and used repeated feedback cycles to improve project output. Portfolio projects include NorthStar CAD Bank, a Canadian online banking prototype with product thinking, backend flow, and frontend experience, and Maple Crest Developments, a polished real-estate website with reusable components, responsive layouts, and motion. Prajit is open to fintech, banking technology, web development, entry-level, remote, hybrid, and in-person opportunities in Canada. Contact email is 3.prajit@gmail.com. Website: prajit.it. LinkedIn and GitHub links are available in the resume section.
+  Prajit Parmar is a junior web developer based in Brantford, Ontario, Canada with a valid Canadian work permit. He has a B.Tech in Computer Engineering (A.D. Patel Institute of Technology, 2019–2023) and a Web Development Diploma from Conestoga College (2023–2024). Skills include HTML5, CSS3, JavaScript, TypeScript, React, Next.js, AngularJS, Node.js, REST APIs, SQL, Tailwind CSS, Framer Motion, Figma, Git, and GitHub. At Pizza Hut, he was promoted to Shift Manager, trained 25+ employees and delivery drivers, managed customer escalations, supported payment reconciliation, and coordinated kitchen, front-counter, and delivery workflows. During his UI/UX internship at Alien Software, he designed wireframes and high-fidelity interfaces with Figma, collaborated with front-end, back-end, and QA teammates, participated in client feedback sessions, and organized design files for developer handoff. Portfolio projects include NorthStar CAD Bank (AngularJS banking prototype using seeded demo data), Maple Crest Developments (fictional real estate site in Next.js and React), Aurora Health Systems (educational healthcare dashboard prototype), and a Personal Finance Tracker (browser-based budgeting tool). Prajit is seeking junior web development, front-end development, or digital-product roles in Canada. Contact: 3.prajit@gmail.com, prajit.it, linkedin.com/in/prajit-parmar-92705a189, github.com/Prajit-Parmar.
 </section>
 
 <!-- AI AGENT -->
@@ -1971,7 +2033,7 @@
     <div class="agent-head">
       <div>
         <div class="agent-kicker">Portfolio Guide</div>
-        <div class="agent-title" id="agentTitle">Prajit's AI Agent</div>
+        <div class="agent-title" id="agentTitle">Portfolio Assistant</div>
       </div>
       <button class="agent-close" type="button" onclick="closeAgent()" aria-label="Close AI agent">x</button>
     </div>
@@ -1992,12 +2054,12 @@
         <button type="submit">Ask</button>
       </form>
       <div class="agent-summary">
-        <h3>AI-readable facts</h3>
+        <h3>Quick facts</h3>
         <ul>
-          <li>Role target: fintech, banking technology, and web development.</li>
-          <li>Core stack: HTML, CSS, JavaScript, Node.js, Git, GitHub.</li>
-          <li>Product strengths: digital banking UX, dashboards, forms, and recruiter-ready demos.</li>
-          <li>Availability: Canada, remote, hybrid, or in-person roles.</li>
+          <li>Role target: junior web dev, front-end dev, digital product — Canada.</li>
+          <li>Core stack: JavaScript, TypeScript, React, Next.js, Node.js, SQL, Figma.</li>
+          <li>4 live projects: NorthStar, Maple Crest, Finance Tracker, Aurora Health.</li>
+          <li>Valid Canadian work permit. Remote, hybrid, or in-person.</li>
         </ul>
       </div>
     </div>
@@ -2029,11 +2091,11 @@
         <label>Reason for Contact</label>
         <select id="fReason">
           <option value="">Select a reason...</option>
-          <option>Job Opportunity — Full-Time</option>
-          <option>Job Opportunity — Internship / Co-op</option>
-          <option>Freelance / Contract Work</option>
-          <option>Collaboration on a Project</option>
-          <option>General Inquiry</option>
+          <option>Full-time opportunity</option>
+          <option>Contract / freelance</option>
+          <option>Recruiter inquiry</option>
+          <option>Project collaboration</option>
+          <option>General message</option>
         </select>
       </div>
       <div class="form-group">
@@ -2237,7 +2299,7 @@ async function sendToAgent(userMessage) {
       resume: 'His resume is available at prajit.it/Prajit_Parmar_Resume.html — open it in Chrome and print to PDF. It covers all four projects, full tech stack, and his work experience.',
     };
     const q = userMessage.toLowerCase();
-    let reply = 'Prajit Parmar is a fintech and web developer in Brantford, Ontario with a valid Canadian work permit. He\'s open to web dev, frontend, and fintech roles across Canada. Email: 3.prajit@gmail.com.';
+    let reply = 'Prajit Parmar is a junior web developer in Brantford, Ontario with a valid Canadian work permit. He\'s open to web dev, front-end, and digital-product roles in Canada. Email: 3.prajit@gmail.com.';
     if(q.match(/skill|stack|tech|react|node|javascript/)) reply = fallbacks.skill;
     else if(q.match(/project|bank|northstar|maple|aurora|demo/)) reply = fallbacks.project;
     else if(q.match(/contact|email|hire|reach|phone/)) reply = fallbacks.contact;
