@@ -1175,6 +1175,99 @@
   }
   section { scroll-margin-top: 7.5rem; }
 
+  /* ── AI AGENT FAB ── */
+  .ai-fab {
+    position: fixed;
+    bottom: 1.8rem;
+    right: 1.8rem;
+    z-index: 200;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--cyan) 0%, #38a8ff 100%);
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    color: #07100d;
+    box-shadow: 0 8px 28px rgba(55,230,193,0.40), 0 2px 8px rgba(0,0,0,0.35);
+    transition: transform .22s ease, box-shadow .22s ease;
+    animation: fabAppear .7s .9s both;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ai-fab:hover {
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 16px 44px rgba(55,230,193,0.55), 0 0 0 9px rgba(55,230,193,0.1);
+  }
+  .ai-fab:active { transform: scale(0.96); }
+  .ai-fab-pulse {
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 2px solid rgba(55,230,193,0.5);
+    animation: fabPulse 2.4s ease-in-out infinite;
+    pointer-events: none;
+  }
+  .ai-fab-icon {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  .ai-fab-label {
+    font-family: 'Syne', sans-serif;
+    font-size: .48rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    line-height: 1;
+    opacity: .85;
+  }
+  .ai-fab-tooltip {
+    position: absolute;
+    right: calc(100% + .9rem);
+    top: 50%;
+    transform: translateY(-50%) translateX(6px);
+    background: rgba(10,14,24,0.96);
+    border: 1px solid rgba(55,230,193,0.28);
+    border-radius: 8px;
+    padding: .5rem .85rem;
+    font-size: .78rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    color: var(--white);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .18s ease, transform .18s ease;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  }
+  .ai-fab-tooltip::after {
+    content: '';
+    position: absolute;
+    right: -6px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 6px solid transparent;
+    border-right: none;
+    border-left-color: rgba(55,230,193,0.28);
+  }
+  .ai-fab:hover .ai-fab-tooltip {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+  @keyframes fabPulse {
+    0%, 100% { transform: scale(1); opacity: .65; }
+    50% { transform: scale(1.22); opacity: 0; }
+  }
+  @keyframes fabAppear {
+    from { opacity: 0; transform: scale(0.55) translateY(24px); }
+    to   { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
   /* ── HAMBURGER ── */
   .nav-hamburger {
     display: none;
@@ -1253,11 +1346,11 @@
     .nav-links { display: none; }
     .nav-hamburger { display: flex; }
     .mobile-menu { display: flex; }
-    .nav-action-group { gap: .4rem; }
-    .agent-nav-btn, .nav-cta {
+    .nav-action-group { gap: .5rem; }
+    .nav-cta {
       min-height: 2.65rem;
-      padding: 0 .85rem;
-      font-size: .72rem;
+      padding: 0 1rem;
+      font-size: .75rem;
     }
     .featured-project { grid-template-columns: 1fr; gap: 1.5rem; }
     .featured-project-preview { height: 180px; }
@@ -1276,11 +1369,11 @@
       padding: .65rem .8rem;
       border-radius: 14px;
     }
-    .nav-action-group { gap: .4rem; }
-    .agent-nav-btn, .nav-cta {
+    .nav-action-group { gap: .5rem; }
+    .nav-cta {
       min-height: 2.65rem;
-      padding: 0 .75rem;
-      font-size: .68rem;
+      padding: 0 .9rem;
+      font-size: .72rem;
     }
 
     #hero {
@@ -1382,16 +1475,6 @@
     .featured-project-preview { height: 140px; }
   }
 
-  /* ── BREAKPOINT: 385px (tiny phones — hide AI Agent to prevent nav overflow) ── */
-  @media (max-width: 385px) {
-    .agent-nav-btn { display: none; }
-    .nav-cta {
-      padding: 0 .65rem;
-      font-size: .65rem;
-      min-height: 2.5rem;
-    }
-  }
-
   /* ── BREAKPOINT: 360px (very small mobile) ── */
   @media (max-width: 360px) {
     nav { padding: .55rem .6rem; }
@@ -1406,6 +1489,12 @@
     .timeline-item { padding-left: 2rem; }
     .timeline::before { left: .25rem; }
     .contact-btn { font-size: .8rem; padding: .7rem 1rem; }
+  }
+
+  /* ── FAB on small screens ── */
+  @media (max-width: 480px) {
+    .ai-fab { bottom: 1.4rem; right: 1.2rem; width: 54px; height: 54px; }
+    .ai-fab-tooltip { display: none; }
   }
 
   /* ── LANDSCAPE PHONES ── */
@@ -1455,7 +1544,6 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-action-group">
-    <button class="agent-nav-btn" type="button" onclick="openAgent()">AI Agent</button>
     <button class="nav-cta" onclick="openModal()">Hire Me</button>
     <button class="nav-hamburger" id="navHamburger" type="button" aria-label="Open menu" aria-expanded="false" onclick="toggleMobileMenu()">
       <span></span><span></span><span></span>
@@ -1472,6 +1560,18 @@
   <a href="#resume" onclick="closeMobileMenu()">Resume</a>
   <a href="#contact" onclick="closeMobileMenu()">Contact</a>
 </div>
+
+<!-- AI AGENT FAB -->
+<button class="ai-fab" id="aiFab" type="button" onclick="openAgent()" aria-label="Open AI Portfolio Agent">
+  <span class="ai-fab-pulse"></span>
+  <svg class="ai-fab-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M12 2L13.9 8.26L20 10L13.9 11.74L12 18L10.1 11.74L4 10L10.1 8.26L12 2Z"/>
+    <circle cx="19.5" cy="5" r="1.4" opacity=".55"/>
+    <circle cx="4.5" cy="19" r="1" opacity=".38"/>
+  </svg>
+  <span class="ai-fab-label">AI</span>
+  <span class="ai-fab-tooltip">Ask AI Agent</span>
+</button>
 
 <!-- HERO -->
 <section id="hero">
