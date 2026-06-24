@@ -1855,16 +1855,23 @@ document.querySelectorAll('.skills-grid, .projects-grid').forEach(grid => {
   });
 });
 
-// Modal
-const agentResponses = {
-  skills: '<strong>Skills scan ready:</strong> I will lock onto the strongest recruiter signals: frontend, integration, data, design, fintech domain knowledge, and practical tooling.',
-  projects: '<strong>Project fit:</strong> The strongest portfolio proof is NorthStar CAD Bank, a Canadian online banking prototype with login, CAD balances, cards, E-Transfer flows, biometric controls, help, and profile screens. Maple Crest Developments adds a polished real-estate website showcase, and the Personal Finance Tracker gives a quick budgeting and spending demo for recruiters.',
-  resume: '<strong>Resume:</strong> The resume section includes the PDF download plus Website, LinkedIn, and GitHub links. I can scroll there so a recruiter or AI reviewer can grab everything quickly.',
-  contact: '<strong>Contact:</strong> Prajit is open to fintech, banking technology, and web development roles in Canada, remote, hybrid, or in-person. Email: 3.prajit@gmail.com.',
-  summary: '<strong>Recruiter summary:</strong> Prajit Parmar is a fintech and web development candidate in Brantford, Ontario with a valid Canadian work permit. He combines shift leadership at Pizza Hut, UI/UX internship work at Alien Software, and portfolio projects in digital banking and real-estate web design.',
-  hire: '<strong>Why hire Prajit:</strong> He has a focused fintech portfolio, real customer-service and leadership experience, working demos, and a clear interest in banking technology, product structure, and UI improvement. That mix is useful for entry-level web, fintech, QA-adjacent, support engineering, or product-minded development roles.'
-};
+// ── REAL AI AGENT ──────────────────────────────────────────────
+// Replace WORKER_URL with your deployed Cloudflare Worker URL after running:
+//   cd worker && npm install && npx wrangler login && npx wrangler deploy
+const WORKER_URL = 'PASTE_YOUR_WORKER_URL_HERE';
+
+let agentHistory = [];   // conversation memory for this session
 const agentScanTimers = [];
+
+// Quick-action prompts that get sent to the real AI
+const QUICK_PROMPTS = {
+  skills:   'Give me a quick summary of Prajit\'s technical skills and which ones are most relevant for a fintech or web developer role.',
+  projects: 'What are Prajit\'s best projects and why should a recruiter care about them?',
+  resume:   'Where can I find Prajit\'s resume and what does it cover?',
+  contact:  'How do I contact Prajit or reach out about a job opportunity?',
+  summary:  'Give me a 3-sentence recruiter summary of Prajit Parmar.',
+  hire:     'Why should I hire Prajit Parmar? What makes him stand out?',
+};
 
 function openAgent() {
   document.getElementById('agentOverlay').classList.add('open');
@@ -1881,18 +1888,8 @@ function closeAgent() {
 function handleAgentOverlayClick(e) {
   if(e.target === document.getElementById('agentOverlay')) closeAgent();
 }
-function setAgentMessage(key) {
-  document.getElementById('agentMessage').innerHTML = agentResponses[key] || agentResponses.summary;
-}
-function setAgentHtml(html, scanning) {
-  const message = document.getElementById('agentMessage');
-  message.innerHTML = html;
-  message.classList.toggle('scanning', Boolean(scanning));
-}
 function clearAgentScan() {
-  while(agentScanTimers.length) {
-    clearTimeout(agentScanTimers.pop());
-  }
+  while(agentScanTimers.length) clearTimeout(agentScanTimers.pop());
   document.querySelectorAll('.agent-highlight').forEach(el => el.classList.remove('agent-highlight'));
   document.querySelectorAll('.agent-section-focus').forEach(el => el.classList.remove('agent-section-focus'));
   document.getElementById('agentMessage')?.classList.remove('scanning');
@@ -1901,62 +1898,119 @@ function jumpToSection(id, keepAgentOpen) {
   if(!keepAgentOpen) closeAgent();
   document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+// Show typing indicator
+function setTyping() {
+  const msg = document.getElementById('agentMessage');
+  msg.innerHTML = '<span style="letter-spacing:.2em;color:var(--cyan)">● ● ●</span>';
+  msg.classList.add('scanning');
+}
+
+// Show reply text
+function setReply(html) {
+  const msg = document.getElementById('agentMessage');
+  msg.innerHTML = html;
+  msg.classList.remove('scanning');
+}
+
+// Skills highlight tour (visual — always works without AI)
 function runSkillsTour() {
   clearAgentScan();
-  openAgent();
-  setAgentHtml('<strong>Scanning skills...</strong> I am reading the stack like a recruiter would: build ability, product thinking, fintech relevance, and tools.', true);
   jumpToSection('skills', true);
-
-  const skillsSection = document.getElementById('skills');
-  const prioritySkills = ['HTML / CSS', 'JavaScript', 'REST APIs', 'SQL', 'Figma / UI·UX', 'Git & GitHub', 'Fintech Concepts', 'Digital Banking', 'AI Tools'];
-  skillsSection?.classList.add('agent-section-focus');
-
-  prioritySkills.forEach((skillName, index) => {
+  document.getElementById('skills')?.classList.add('agent-section-focus');
+  const prioritySkills = ['HTML / CSS', 'JavaScript', 'REST APIs', 'SQL', 'Figma / UI·UX', 'Git & GitHub', 'Fintech Concepts', 'Digital Banking', 'React', 'TypeScript', 'Next.js', 'Node.js'];
+  prioritySkills.forEach((name, i) => {
     agentScanTimers.push(setTimeout(() => {
-      const chip = [...document.querySelectorAll('.skill-chip')].find(item => item.textContent.includes(skillName));
+      const chip = [...document.querySelectorAll('.skill-chip')].find(el => el.textContent.includes(name));
       chip?.classList.add('agent-highlight');
-    }, 450 + index * 170));
+    }, 300 + i * 140));
   });
-
-  agentScanTimers.push(setTimeout(() => {
-    setAgentHtml('<strong>Skills ranked for hiring signal:</strong> HTML/CSS and JavaScript show frontend execution. REST APIs and SQL show data/integration thinking. Figma/UI-UX plus Digital Banking and Fintech Concepts make the portfolio stronger for banking technology roles.', false);
-  }, 2200));
 }
-function agentQuickAction(key) {
-  if(key === 'skills') {
-    runSkillsTour();
+
+// Core: send a message to the real AI worker
+async function sendToAgent(userMessage) {
+  if(!userMessage.trim()) return;
+
+  // Push user turn into history
+  agentHistory.push({ role: 'user', content: userMessage });
+
+  setTyping();
+
+  // Check if Worker URL has been set
+  if(!WORKER_URL || WORKER_URL === 'PASTE_YOUR_WORKER_URL_HERE') {
+    // Fallback: local answers while Worker is not deployed yet
+    const fallbacks = {
+      skill: 'Prajit\'s stack covers HTML5, CSS3, JavaScript, TypeScript, React, Next.js, AngularJS, Node.js, Tailwind CSS, SQL, and Figma. His strongest signals are the NorthStar banking prototype and the Maple Crest Next.js site.',
+      project: 'His headline project is NorthStar CAD Bank — a live Canadian banking prototype with authenticated accounts, E-Transfer, and CAD balances. He also built Maple Crest (Next.js real estate), Aurora Health (hospital dashboard), and a Personal Finance Tracker.',
+      contact: 'You can reach Prajit at 3.prajit@gmail.com or (647) 220-8123. Use the Hire Me button at the top of the page to send a message directly.',
+      resume: 'His resume is available at prajit.it/Prajit_Parmar_Resume.html — open it in Chrome and print to PDF. It covers all four projects, full tech stack, and his work experience.',
+    };
+    const q = userMessage.toLowerCase();
+    let reply = 'Prajit Parmar is a fintech and web developer in Brantford, Ontario with a valid Canadian work permit. He\'s open to web dev, frontend, and fintech roles across Canada. Email: 3.prajit@gmail.com.';
+    if(q.match(/skill|stack|tech|react|node|javascript/)) reply = fallbacks.skill;
+    else if(q.match(/project|bank|northstar|maple|aurora|demo/)) reply = fallbacks.project;
+    else if(q.match(/contact|email|hire|reach|phone/)) reply = fallbacks.contact;
+    else if(q.match(/resume|cv|pdf|download/)) reply = fallbacks.resume;
+    agentHistory.push({ role: 'assistant', content: reply });
+    setReply(reply);
     return;
   }
-  clearAgentScan();
-  setAgentMessage(key);
-  if(['skills', 'projects', 'resume', 'contact'].includes(key)) {
-    setTimeout(() => jumpToSection(key), 550);
+
+  try {
+    const res = await fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message: userMessage,
+        history: agentHistory.slice(0, -1), // history before this turn
+      }),
+    });
+
+    if(!res.ok) throw new Error('Worker error ' + res.status);
+
+    const { reply, action } = await res.json();
+
+    // Add assistant reply to history
+    agentHistory.push({ role: 'assistant', content: reply });
+
+    // Keep history to last 10 turns to avoid bloat
+    if(agentHistory.length > 10) agentHistory = agentHistory.slice(-10);
+
+    setReply(reply);
+
+    // Execute optional section navigation
+    if(action && document.getElementById(action)) {
+      setTimeout(() => jumpToSection(action, true), 600);
+    }
+
+    // If agent mentions skills, run the visual tour too
+    if(action === 'skills' || userMessage.toLowerCase().match(/skill|stack/)) {
+      setTimeout(runSkillsTour, 400);
+    }
+
+  } catch(err) {
+    console.error('Agent error:', err);
+    setReply('I\'m having a moment. You can email Prajit directly at <a href="mailto:3.prajit@gmail.com" style="color:var(--cyan)">3.prajit@gmail.com</a> or use the Hire Me button above.');
   }
 }
+
+// Quick action buttons
+function agentQuickAction(key) {
+  clearAgentScan();
+  openAgent();
+  const prompt = QUICK_PROMPTS[key] || QUICK_PROMPTS.summary;
+  if(key === 'skills') setTimeout(runSkillsTour, 200);
+  sendToAgent(prompt);
+}
+
+// Free-text submit
 function askAgent(event) {
   event.preventDefault();
   const input = document.getElementById('agentInput');
-  const question = (input.value || '').toLowerCase();
-  let key = 'summary';
-
-  if(question.includes('skill') || question.includes('stack') || question.includes('technology')) key = 'skills';
-  else if(question.includes('project') || question.includes('bank') || question.includes('demo') || question.includes('work')) key = 'projects';
-  else if(question.includes('resume') || question.includes('cv') || question.includes('pdf')) key = 'resume';
-  else if(question.includes('contact') || question.includes('email') || question.includes('hire') || question.includes('reach')) key = 'contact';
-  else if(question.includes('why') || question.includes('fit') || question.includes('chance')) key = 'hire';
-
-  if(key === 'skills') {
-    input.value = '';
-    runSkillsTour();
-    return;
-  }
-
-  clearAgentScan();
-  setAgentMessage(key);
-  if(['projects', 'resume', 'contact'].includes(key)) {
-    setTimeout(() => jumpToSection(key), 650);
-  }
+  const question = input.value.trim();
+  if(!question) return;
   input.value = '';
+  sendToAgent(question);
 }
 
 function openModal() {
